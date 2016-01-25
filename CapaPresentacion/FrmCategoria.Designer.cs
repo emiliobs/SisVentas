@@ -42,7 +42,6 @@
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.buscarBoton = new System.Windows.Forms.Button();
             this.BuscarnombreTexto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Cancelarbutton = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@
             this.ErrorIconoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.TtMensajetoolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TipoDocumentocomboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoGridView1)).BeginInit();
@@ -99,6 +99,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.TipoDocumentocomboBox);
             this.tabPage1.Controls.Add(this.dataListadoGridView1);
             this.tabPage1.Controls.Add(this.TotalLabel);
             this.tabPage1.Controls.Add(this.EliminarcheckBox);
@@ -106,7 +107,6 @@
             this.tabPage1.Controls.Add(this.EliminarBoton);
             this.tabPage1.Controls.Add(this.buscarBoton);
             this.tabPage1.Controls.Add(this.BuscarnombreTexto);
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -202,21 +202,11 @@
             // 
             // BuscarnombreTexto
             // 
-            this.BuscarnombreTexto.Location = new System.Drawing.Point(108, 53);
+            this.BuscarnombreTexto.Location = new System.Drawing.Point(221, 53);
             this.BuscarnombreTexto.Name = "BuscarnombreTexto";
-            this.BuscarnombreTexto.Size = new System.Drawing.Size(354, 22);
+            this.BuscarnombreTexto.Size = new System.Drawing.Size(275, 22);
             this.BuscarnombreTexto.TabIndex = 1;
             this.BuscarnombreTexto.TextChanged += new System.EventHandler(this.BuscarnombreTexto_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nombre:";
             // 
             // tabPage2
             // 
@@ -376,6 +366,18 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // TipoDocumentocomboBox
+            // 
+            this.TipoDocumentocomboBox.FormattingEnabled = true;
+            this.TipoDocumentocomboBox.Items.AddRange(new object[] {
+            "Documento",
+            "Razon Social"});
+            this.TipoDocumentocomboBox.Location = new System.Drawing.Point(31, 51);
+            this.TipoDocumentocomboBox.Name = "TipoDocumentocomboBox";
+            this.TipoDocumentocomboBox.Size = new System.Drawing.Size(184, 24);
+            this.TipoDocumentocomboBox.TabIndex = 8;
+            this.TipoDocumentocomboBox.Text = "Documento";
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -414,7 +416,6 @@
         private System.Windows.Forms.Button EliminarBoton;
         private System.Windows.Forms.Button buscarBoton;
         private System.Windows.Forms.TextBox BuscarnombreTexto;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TotalLabel;
         private System.Windows.Forms.CheckBox EliminarcheckBox;
         private System.Windows.Forms.DataGridView dataListadoGridView1;
@@ -433,5 +434,6 @@
         private System.Windows.Forms.ErrorProvider ErrorIconoerrorProvider;
         private System.Windows.Forms.ToolTip TtMensajetoolTip;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox TipoDocumentocomboBox;
     }
 }

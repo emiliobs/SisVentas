@@ -96,6 +96,9 @@
     <EmbeddedResource Include="frmPresentacion.resx">
       <DependentUpon>frmPresentacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVistaCategoriaArticulo.resx">
       <DependentUpon>frmVistaCategoriaArticulo.cs</DependentUpon>
     </EmbeddedResource>
