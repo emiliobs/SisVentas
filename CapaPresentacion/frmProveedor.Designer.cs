@@ -42,7 +42,6 @@
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.buscarBoton = new System.Windows.Forms.Button();
             this.BuscarnombreTexto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.Cancelarbutton = new System.Windows.Forms.Button();
             this.Editarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
@@ -52,23 +51,25 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.UrltextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TelefonotextBox = new System.Windows.Forms.TextBox();
+            this.NumeroDocumentotextBox = new System.Windows.Forms.TextBox();
+            this.TipoDocumentocomboBox = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.SectorComercialcomboBox = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.DirecciontextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.label2 = new System.Windows.Forms.Label();
             this.TtMensajetoolTip = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.DirecciontextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.SectorComercialcomboBox = new System.Windows.Forms.ComboBox();
-            this.TipoDocumentocomboBox = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.NumeroDocumentotextBox = new System.Windows.Forms.TextBox();
-            this.TelefonotextBox = new System.Windows.Forms.TextBox();
-            this.EmailtextBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.UrltextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.DocumentocomboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIconoerrorProvider)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -104,6 +105,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.DocumentocomboBox1);
             this.tabPage1.Controls.Add(this.dataListadoGridView1);
             this.tabPage1.Controls.Add(this.TotalLabel);
             this.tabPage1.Controls.Add(this.EliminarcheckBox);
@@ -111,7 +113,6 @@
             this.tabPage1.Controls.Add(this.EliminarBoton);
             this.tabPage1.Controls.Add(this.buscarBoton);
             this.tabPage1.Controls.Add(this.BuscarnombreTexto);
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -136,6 +137,8 @@
             this.dataListadoGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListadoGridView1.Size = new System.Drawing.Size(1213, 368);
             this.dataListadoGridView1.TabIndex = 7;
+            this.dataListadoGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoGridView1_CellContentClick);
+            this.dataListadoGridView1.DoubleClick += new System.EventHandler(this.dataListadoGridView1_DoubleClick);
             // 
             // Eliminar
             // 
@@ -147,7 +150,7 @@
             // 
             this.TotalLabel.AutoSize = true;
             this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLabel.Location = new System.Drawing.Point(701, 122);
+            this.TotalLabel.Location = new System.Drawing.Point(1076, 135);
             this.TotalLabel.Name = "TotalLabel";
             this.TotalLabel.Size = new System.Drawing.Size(57, 20);
             this.TotalLabel.TabIndex = 6;
@@ -163,13 +166,14 @@
             this.EliminarcheckBox.TabIndex = 5;
             this.EliminarcheckBox.Text = "Eliminar";
             this.EliminarcheckBox.UseVisualStyleBackColor = true;
+            this.EliminarcheckBox.CheckedChanged += new System.EventHandler(this.EliminarcheckBox_CheckedChanged);
             // 
             // imprimirBoton
             // 
             this.imprimirBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imprimirBoton.Image = ((System.Drawing.Image)(resources.GetObject("imprimirBoton.Image")));
             this.imprimirBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.imprimirBoton.Location = new System.Drawing.Point(878, 36);
+            this.imprimirBoton.Location = new System.Drawing.Point(1080, 36);
             this.imprimirBoton.Name = "imprimirBoton";
             this.imprimirBoton.Size = new System.Drawing.Size(164, 55);
             this.imprimirBoton.TabIndex = 4;
@@ -181,41 +185,33 @@
             this.EliminarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarBoton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarBoton.Image")));
             this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarBoton.Location = new System.Drawing.Point(698, 36);
+            this.EliminarBoton.Location = new System.Drawing.Point(900, 36);
             this.EliminarBoton.Name = "EliminarBoton";
             this.EliminarBoton.Size = new System.Drawing.Size(164, 55);
             this.EliminarBoton.TabIndex = 3;
             this.EliminarBoton.Text = "Eliminar";
             this.EliminarBoton.UseVisualStyleBackColor = true;
+            this.EliminarBoton.Click += new System.EventHandler(this.EliminarBoton_Click);
             // 
             // buscarBoton
             // 
             this.buscarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buscarBoton.Image = ((System.Drawing.Image)(resources.GetObject("buscarBoton.Image")));
             this.buscarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buscarBoton.Location = new System.Drawing.Point(518, 36);
+            this.buscarBoton.Location = new System.Drawing.Point(720, 36);
             this.buscarBoton.Name = "buscarBoton";
             this.buscarBoton.Size = new System.Drawing.Size(164, 55);
             this.buscarBoton.TabIndex = 2;
             this.buscarBoton.Text = "Buscar";
             this.buscarBoton.UseVisualStyleBackColor = true;
+            this.buscarBoton.Click += new System.EventHandler(this.buscarBoton_Click);
             // 
             // BuscarnombreTexto
             // 
-            this.BuscarnombreTexto.Location = new System.Drawing.Point(108, 53);
+            this.BuscarnombreTexto.Location = new System.Drawing.Point(296, 51);
             this.BuscarnombreTexto.Name = "BuscarnombreTexto";
-            this.BuscarnombreTexto.Size = new System.Drawing.Size(354, 22);
+            this.BuscarnombreTexto.Size = new System.Drawing.Size(374, 22);
             this.BuscarnombreTexto.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nombre:";
             // 
             // Cancelarbutton
             // 
@@ -227,6 +223,7 @@
             this.Cancelarbutton.TabIndex = 9;
             this.Cancelarbutton.Text = "&Cancelar";
             this.Cancelarbutton.UseVisualStyleBackColor = true;
+            this.Cancelarbutton.Click += new System.EventHandler(this.Cancelarbutton_Click);
             // 
             // Editarbutton
             // 
@@ -238,6 +235,7 @@
             this.Editarbutton.TabIndex = 8;
             this.Editarbutton.Text = "E&ditar";
             this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -249,6 +247,7 @@
             this.Guardarbutton.TabIndex = 7;
             this.Guardarbutton.Text = "&Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -260,6 +259,7 @@
             this.Nuevobutton.TabIndex = 6;
             this.Nuevobutton.Text = "&Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // RazonSocialtextBox
             // 
@@ -305,6 +305,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.UrltextBox);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.EmailtextBox);
@@ -333,6 +334,141 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proveedores";
+            // 
+            // UrltextBox
+            // 
+            this.UrltextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.UrltextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UrltextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UrltextBox.ForeColor = System.Drawing.Color.Black;
+            this.UrltextBox.Location = new System.Drawing.Point(291, 379);
+            this.UrltextBox.Name = "UrltextBox";
+            this.UrltextBox.Size = new System.Drawing.Size(387, 27);
+            this.UrltextBox.TabIndex = 21;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(118, 379);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 20);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Url:";
+            // 
+            // EmailtextBox
+            // 
+            this.EmailtextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.EmailtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailtextBox.ForeColor = System.Drawing.Color.Black;
+            this.EmailtextBox.Location = new System.Drawing.Point(667, 313);
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(353, 27);
+            this.EmailtextBox.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(561, 320);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 20);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Email:";
+            // 
+            // TelefonotextBox
+            // 
+            this.TelefonotextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.TelefonotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TelefonotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TelefonotextBox.ForeColor = System.Drawing.Color.Black;
+            this.TelefonotextBox.Location = new System.Drawing.Point(285, 320);
+            this.TelefonotextBox.Name = "TelefonotextBox";
+            this.TelefonotextBox.Size = new System.Drawing.Size(247, 27);
+            this.TelefonotextBox.TabIndex = 17;
+            // 
+            // NumeroDocumentotextBox
+            // 
+            this.NumeroDocumentotextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.NumeroDocumentotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NumeroDocumentotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumeroDocumentotextBox.ForeColor = System.Drawing.Color.Black;
+            this.NumeroDocumentotextBox.Location = new System.Drawing.Point(795, 152);
+            this.NumeroDocumentotextBox.Name = "NumeroDocumentotextBox";
+            this.NumeroDocumentotextBox.Size = new System.Drawing.Size(339, 27);
+            this.NumeroDocumentotextBox.TabIndex = 16;
+            // 
+            // TipoDocumentocomboBox
+            // 
+            this.TipoDocumentocomboBox.FormattingEnabled = true;
+            this.TipoDocumentocomboBox.Items.AddRange(new object[] {
+            "DNI",
+            "RUC",
+            "CEDULA",
+            "NIE"});
+            this.TipoDocumentocomboBox.Location = new System.Drawing.Point(291, 152);
+            this.TipoDocumentocomboBox.Name = "TipoDocumentocomboBox";
+            this.TipoDocumentocomboBox.Size = new System.Drawing.Size(222, 28);
+            this.TipoDocumentocomboBox.TabIndex = 15;
+            this.TipoDocumentocomboBox.Text = "NIE";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(124, 155);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(152, 20);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Tipo Documento:";
+            // 
+            // SectorComercialcomboBox
+            // 
+            this.SectorComercialcomboBox.FormattingEnabled = true;
+            this.SectorComercialcomboBox.Items.AddRange(new object[] {
+            "Salud",
+            "Alimento",
+            "Tecnología",
+            "Ropa",
+            "Servicios"});
+            this.SectorComercialcomboBox.Location = new System.Drawing.Point(942, 98);
+            this.SectorComercialcomboBox.Name = "SectorComercialcomboBox";
+            this.SectorComercialcomboBox.Size = new System.Drawing.Size(192, 28);
+            this.SectorComercialcomboBox.TabIndex = 13;
+            this.SectorComercialcomboBox.Text = "Alimentos";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(118, 207);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 20);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Dirección:";
+            // 
+            // DirecciontextBox
+            // 
+            this.DirecciontextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.DirecciontextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DirecciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DirecciontextBox.ForeColor = System.Drawing.Color.Black;
+            this.DirecciontextBox.Location = new System.Drawing.Point(291, 200);
+            this.DirecciontextBox.Multiline = true;
+            this.DirecciontextBox.Name = "DirecciontextBox";
+            this.DirecciontextBox.Size = new System.Drawing.Size(479, 94);
+            this.DirecciontextBox.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(759, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(161, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Sector Comercial:";
             // 
             // tabPage2
             // 
@@ -375,140 +511,27 @@
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 4;
             // 
-            // DirecciontextBox
+            // DocumentocomboBox1
             // 
-            this.DirecciontextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.DirecciontextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DirecciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DirecciontextBox.ForeColor = System.Drawing.Color.Black;
-            this.DirecciontextBox.Location = new System.Drawing.Point(291, 200);
-            this.DirecciontextBox.Multiline = true;
-            this.DirecciontextBox.Name = "DirecciontextBox";
-            this.DirecciontextBox.Size = new System.Drawing.Size(479, 94);
-            this.DirecciontextBox.TabIndex = 11;
+            this.DocumentocomboBox1.FormattingEnabled = true;
+            this.DocumentocomboBox1.Items.AddRange(new object[] {
+            "Documento",
+            "Razon Social"});
+            this.DocumentocomboBox1.Location = new System.Drawing.Point(31, 51);
+            this.DocumentocomboBox1.Name = "DocumentocomboBox1";
+            this.DocumentocomboBox1.Size = new System.Drawing.Size(220, 24);
+            this.DocumentocomboBox1.TabIndex = 9;
+            this.DocumentocomboBox1.Text = "Documento";
             // 
-            // label7
+            // label3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(759, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Sector Comercial:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(118, 207);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 20);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Dirección:";
-            // 
-            // SectorComercialcomboBox
-            // 
-            this.SectorComercialcomboBox.FormattingEnabled = true;
-            this.SectorComercialcomboBox.Items.AddRange(new object[] {
-            "Salud",
-            "Alimento",
-            "Tecnología",
-            "Ropa",
-            "Servicios"});
-            this.SectorComercialcomboBox.Location = new System.Drawing.Point(942, 98);
-            this.SectorComercialcomboBox.Name = "SectorComercialcomboBox";
-            this.SectorComercialcomboBox.Size = new System.Drawing.Size(192, 28);
-            this.SectorComercialcomboBox.TabIndex = 13;
-            this.SectorComercialcomboBox.Text = "Alimentos";
-            // 
-            // TipoDocumentocomboBox
-            // 
-            this.TipoDocumentocomboBox.FormattingEnabled = true;
-            this.TipoDocumentocomboBox.Items.AddRange(new object[] {
-            "DNI",
-            "RUC",
-            "CEDULA",
-            "NIE"});
-            this.TipoDocumentocomboBox.Location = new System.Drawing.Point(291, 152);
-            this.TipoDocumentocomboBox.Name = "TipoDocumentocomboBox";
-            this.TipoDocumentocomboBox.Size = new System.Drawing.Size(222, 28);
-            this.TipoDocumentocomboBox.TabIndex = 15;
-            this.TipoDocumentocomboBox.Text = "NIE";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(124, 155);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 20);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Tipo Documento:";
-            // 
-            // NumeroDocumentotextBox
-            // 
-            this.NumeroDocumentotextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.NumeroDocumentotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NumeroDocumentotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroDocumentotextBox.ForeColor = System.Drawing.Color.Black;
-            this.NumeroDocumentotextBox.Location = new System.Drawing.Point(531, 152);
-            this.NumeroDocumentotextBox.Name = "NumeroDocumentotextBox";
-            this.NumeroDocumentotextBox.Size = new System.Drawing.Size(378, 27);
-            this.NumeroDocumentotextBox.TabIndex = 16;
-            // 
-            // TelefonotextBox
-            // 
-            this.TelefonotextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.TelefonotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TelefonotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelefonotextBox.ForeColor = System.Drawing.Color.Black;
-            this.TelefonotextBox.Location = new System.Drawing.Point(285, 320);
-            this.TelefonotextBox.Name = "TelefonotextBox";
-            this.TelefonotextBox.Size = new System.Drawing.Size(247, 27);
-            this.TelefonotextBox.TabIndex = 17;
-            // 
-            // EmailtextBox
-            // 
-            this.EmailtextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.EmailtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EmailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailtextBox.ForeColor = System.Drawing.Color.Black;
-            this.EmailtextBox.Location = new System.Drawing.Point(667, 313);
-            this.EmailtextBox.Name = "EmailtextBox";
-            this.EmailtextBox.Size = new System.Drawing.Size(353, 27);
-            this.EmailtextBox.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(561, 320);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 20);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Email:";
-            // 
-            // UrltextBox
-            // 
-            this.UrltextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.UrltextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UrltextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UrltextBox.ForeColor = System.Drawing.Color.Black;
-            this.UrltextBox.Location = new System.Drawing.Point(291, 379);
-            this.UrltextBox.Name = "UrltextBox";
-            this.UrltextBox.Size = new System.Drawing.Size(387, 27);
-            this.UrltextBox.TabIndex = 21;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(118, 379);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 20);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Url:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(534, 155);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 20);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Número de Documento:";
             // 
             // frmProveedor
             // 
@@ -553,7 +576,6 @@
         private System.Windows.Forms.Button Cancelarbutton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox BuscarnombreTexto;
         private System.Windows.Forms.Button buscarBoton;
         private System.Windows.Forms.Button EliminarBoton;
@@ -578,5 +600,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox UrltextBox;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox DocumentocomboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
