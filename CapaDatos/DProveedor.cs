@@ -183,11 +183,11 @@ namespace CapaDatos
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCon.Open();
                 //Establecer el Comando:
-                SqlCommand cmd = new SqlCommand("spInsertarProvedor", SqlCon);
+                SqlCommand cmd = new SqlCommand("spInsertarProveedor", SqlCon);
                 cmd.CommandType = CommandType.StoredProcedure;
                 //Parametros:
                 SqlParameter pIdProveedor = new SqlParameter("@IdProveedor", proveedor.IdProveedor);
-                cmd.Parameters.Add(@IdProveedor);
+                cmd.Parameters.Add(pIdProveedor);
 
                 SqlParameter pRazonSocial = new SqlParameter("@RazonSocial", proveedor.RazonSocial);
                 cmd.Parameters.Add(pRazonSocial);
@@ -202,7 +202,7 @@ namespace CapaDatos
                 cmd.Parameters.Add(pNumeroDocumento);
 
                 SqlParameter pDireccion = new SqlParameter("@Direccion", proveedor.Direccion);
-                cmd.Parameters.Add(pSectorComercial);
+                cmd.Parameters.Add(pDireccion);
 
                 SqlParameter pTelefono = new SqlParameter("@Telefono", proveedor.Telefono);
                 cmd.Parameters.Add(pTelefono);
@@ -249,7 +249,7 @@ namespace CapaDatos
 
                 //Parametros:
                 SqlParameter pIdProveedor = new SqlParameter("@IdProveedor", proveedor.IdProveedor);
-                cmd.Parameters.Add(@IdProveedor);
+                cmd.Parameters.Add(pIdProveedor);
 
                 SqlParameter pRazonSocial = new SqlParameter("@RazonSocial", proveedor.RazonSocial);
                 cmd.Parameters.Add(pRazonSocial);
@@ -264,7 +264,7 @@ namespace CapaDatos
                 cmd.Parameters.Add(pNumeroDocumento);
 
                 SqlParameter pDireccion = new SqlParameter("@Direccion", proveedor.Direccion);
-                cmd.Parameters.Add(pSectorComercial);
+                cmd.Parameters.Add(pDireccion);
 
                 SqlParameter pTelefono = new SqlParameter("@Telefono", proveedor.Telefono);
                 cmd.Parameters.Add(pTelefono);
