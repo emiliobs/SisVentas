@@ -14,3 +14,4 @@ C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.dll
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedor.resources
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmCliente.resources

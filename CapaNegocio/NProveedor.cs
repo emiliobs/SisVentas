@@ -12,10 +12,16 @@ namespace CapaPresentacion
    public class NProveedor
     {
         //Método Insertar que llama al método insertar de la clase DProveedor de la CapaDatos:
-        public static string Insertat(string RazonSocial, string SectorComercial,
-                                      string TipoDocumento, string NumeroDocumento, 
-                                      string Direccion,string Telefono, string Email, 
-                                      string Url)
+        public static string Insertat(
+                                      string RazonSocial,
+                                      string SectorComercial,
+                                      string TipoDocumento, 
+                                      string NumeroDocumento, 
+                                      string Direccion,
+                                      string Telefono,
+                                      string Email, 
+                                      string Url
+                                      )
         {
             DProveedor proveedor = new DProveedor();
             proveedor.RazonSocial = RazonSocial;
