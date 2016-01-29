@@ -112,7 +112,7 @@ namespace CapaPresentacion
         }
 
         //Método BuscarClienteNumeroDocumento:
-        private void BuscarProveedorNumeroDocumento()
+        private void BuscarClienteNumeroDocumento()
         {
             this.dataListadoGridView1.DataSource = NCliente.BuscarClienteNumeroDocumento(this.BuscarnombreTexto.Text);
             this.OcultarColumnas();
@@ -165,8 +165,8 @@ namespace CapaPresentacion
             }
             else
             {
-                this.BuscarProveedorNumeroDocumento();
-            }
+                this.BuscarClienteNumeroDocumento();    
+            }   
         }
 
         private void EliminarBoton_Click(object sender, EventArgs e)

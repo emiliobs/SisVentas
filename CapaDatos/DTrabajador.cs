@@ -239,7 +239,7 @@ namespace CapaDatos
                 SqlParameter pNombre = new SqlParameter("@Nombre", trabajador.Nombre);
                 cmd.Parameters.Add(pNombre);
 
-                SqlParameter pApellido = new SqlParameter("@Apellido", trabajador.Apellidos);
+                SqlParameter pApellido = new SqlParameter("@Apellidos", trabajador.Apellidos);
                 cmd.Parameters.Add(pApellido);
 
                 SqlParameter pSexo = new SqlParameter("@Sexo",trabajador.Sexo);
@@ -267,7 +267,7 @@ namespace CapaDatos
                 cmd.Parameters.Add(pAcceso);
 
                 SqlParameter pUsuario = new SqlParameter("@Usuario", trabajador.Usuario);
-                cmd.Parameters.Add(pAcceso);
+                cmd.Parameters.Add(pUsuario);
 
                 SqlParameter pPassword = new SqlParameter("@Password", trabajador.password);
                 cmd.Parameters.Add(pPassword);
@@ -313,7 +313,7 @@ namespace CapaDatos
                 SqlParameter pNombre = new SqlParameter("@Nombre", trabajador.Nombre);
                 cmd.Parameters.Add(pNombre);
 
-                SqlParameter pApellido = new SqlParameter("@Apellido", trabajador.Apellidos);
+                SqlParameter pApellido = new SqlParameter("@Apellidoss", trabajador.Apellidos);
                 cmd.Parameters.Add(pApellido);
 
                 SqlParameter pSexo = new SqlParameter("@Sexo", trabajador.Sexo);
@@ -341,7 +341,7 @@ namespace CapaDatos
                 cmd.Parameters.Add(pAcceso);
 
                 SqlParameter pUsuario = new SqlParameter("@Usuario", trabajador.Usuario);
-                cmd.Parameters.Add(pAcceso);
+                cmd.Parameters.Add(pUsuario);
 
                 SqlParameter pPassword = new SqlParameter("@Password", trabajador.password);
                 cmd.Parameters.Add(pPassword);
@@ -428,7 +428,7 @@ namespace CapaDatos
         }
 
         //Método buscar spBuscarTrabajadorApellidos de los trabajadores:
-        public DataTable BuscarClienteApellidos(DTrabajador trabajador)
+        public DataTable BuscarTrabajadorApellidos(DTrabajador trabajador)
         {
             DataTable dataTableResultado = new DataTable("trabajador");
             SqlConnection sqlCon = new SqlConnection();
