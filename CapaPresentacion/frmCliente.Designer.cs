@@ -51,6 +51,10 @@
             this.BuscarnombreTexto = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fechaNacimientodateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.SexocomboBox = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.ApellidostextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -68,10 +72,6 @@
             this.TtMensajetoolTip = new System.Windows.Forms.ToolTip(this.components);
             this.ErrorIconoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.SexocomboBox = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.fechaNacimientodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoGridView1)).BeginInit();
@@ -345,6 +345,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clintes:";
             // 
+            // fechaNacimientodateTimePicker
+            // 
+            this.fechaNacimientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaNacimientodateTimePicker.Location = new System.Drawing.Point(649, 147);
+            this.fechaNacimientodateTimePicker.Name = "fechaNacimientodateTimePicker";
+            this.fechaNacimientodateTimePicker.Size = new System.Drawing.Size(220, 27);
+            this.fechaNacimientodateTimePicker.TabIndex = 28;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(443, 149);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(192, 20);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Fecha de Nacimineto:";
+            // 
+            // SexocomboBox
+            // 
+            this.SexocomboBox.FormattingEnabled = true;
+            this.SexocomboBox.Items.AddRange(new object[] {
+            "F",
+            "M"});
+            this.SexocomboBox.Location = new System.Drawing.Point(291, 146);
+            this.SexocomboBox.Name = "SexocomboBox";
+            this.SexocomboBox.Size = new System.Drawing.Size(91, 28);
+            this.SexocomboBox.TabIndex = 26;
+            this.SexocomboBox.Text = "F";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(135, 149);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 20);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Sexo:";
+            // 
             // ApellidostextBox
             // 
             this.ApellidostextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -505,53 +545,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(223, 21);
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources._1447295218_testimonials;
+            this.pictureBox1.Location = new System.Drawing.Point(223, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(97, 89);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(135, 149);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 20);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Sexo:";
-            // 
-            // SexocomboBox
-            // 
-            this.SexocomboBox.FormattingEnabled = true;
-            this.SexocomboBox.Items.AddRange(new object[] {
-            "F",
-            "M"});
-            this.SexocomboBox.Location = new System.Drawing.Point(291, 146);
-            this.SexocomboBox.Name = "SexocomboBox";
-            this.SexocomboBox.Size = new System.Drawing.Size(91, 28);
-            this.SexocomboBox.TabIndex = 26;
-            this.SexocomboBox.Text = "F";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(443, 149);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(192, 20);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Fecha de Nacimineto:";
-            // 
-            // fechaNacimientodateTimePicker
-            // 
-            this.fechaNacimientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaNacimientodateTimePicker.Location = new System.Drawing.Point(649, 147);
-            this.fechaNacimientodateTimePicker.Name = "fechaNacimientodateTimePicker";
-            this.fechaNacimientodateTimePicker.Size = new System.Drawing.Size(220, 27);
-            this.fechaNacimientodateTimePicker.TabIndex = 28;
             // 
             // frmCliente
             // 

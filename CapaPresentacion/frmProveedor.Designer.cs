@@ -30,27 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProveedor));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ErrorIconoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.DocumentocomboBox1 = new System.Windows.Forms.ComboBox();
             this.dataListadoGridView1 = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.TotalLabel = new System.Windows.Forms.Label();
             this.EliminarcheckBox = new System.Windows.Forms.CheckBox();
-            this.imprimirBoton = new System.Windows.Forms.Button();
-            this.EliminarBoton = new System.Windows.Forms.Button();
-            this.buscarBoton = new System.Windows.Forms.Button();
             this.BuscarnombreTexto = new System.Windows.Forms.TextBox();
-            this.Cancelarbutton = new System.Windows.Forms.Button();
-            this.Editarbutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Nuevobutton = new System.Windows.Forms.Button();
             this.RazonSocialtextBox = new System.Windows.Forms.TextBox();
             this.IdProveedortextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.UrltextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.EmailtextBox = new System.Windows.Forms.TextBox();
@@ -68,26 +62,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TtMensajetoolTip = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.DocumentocomboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imprimirBoton = new System.Windows.Forms.Button();
+            this.EliminarBoton = new System.Windows.Forms.Button();
+            this.buscarBoton = new System.Windows.Forms.Button();
+            this.Cancelarbutton = new System.Windows.Forms.Button();
+            this.Editarbutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIconoerrorProvider)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(223, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // ErrorIconoerrorProvider
             // 
@@ -120,6 +110,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // DocumentocomboBox1
+            // 
+            this.DocumentocomboBox1.FormattingEnabled = true;
+            this.DocumentocomboBox1.Items.AddRange(new object[] {
+            "Documento",
+            "Razon Social"});
+            this.DocumentocomboBox1.Location = new System.Drawing.Point(31, 51);
+            this.DocumentocomboBox1.Name = "DocumentocomboBox1";
+            this.DocumentocomboBox1.Size = new System.Drawing.Size(220, 24);
+            this.DocumentocomboBox1.TabIndex = 9;
+            this.DocumentocomboBox1.Text = "Documento";
             // 
             // dataListadoGridView1
             // 
@@ -168,98 +170,12 @@
             this.EliminarcheckBox.UseVisualStyleBackColor = true;
             this.EliminarcheckBox.CheckedChanged += new System.EventHandler(this.EliminarcheckBox_CheckedChanged);
             // 
-            // imprimirBoton
-            // 
-            this.imprimirBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.imprimirBoton.Image = ((System.Drawing.Image)(resources.GetObject("imprimirBoton.Image")));
-            this.imprimirBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.imprimirBoton.Location = new System.Drawing.Point(1080, 36);
-            this.imprimirBoton.Name = "imprimirBoton";
-            this.imprimirBoton.Size = new System.Drawing.Size(164, 55);
-            this.imprimirBoton.TabIndex = 4;
-            this.imprimirBoton.Text = "Imprimir";
-            this.imprimirBoton.UseVisualStyleBackColor = true;
-            // 
-            // EliminarBoton
-            // 
-            this.EliminarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarBoton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarBoton.Image")));
-            this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarBoton.Location = new System.Drawing.Point(900, 36);
-            this.EliminarBoton.Name = "EliminarBoton";
-            this.EliminarBoton.Size = new System.Drawing.Size(164, 55);
-            this.EliminarBoton.TabIndex = 3;
-            this.EliminarBoton.Text = "Eliminar";
-            this.EliminarBoton.UseVisualStyleBackColor = true;
-            this.EliminarBoton.Click += new System.EventHandler(this.EliminarBoton_Click);
-            // 
-            // buscarBoton
-            // 
-            this.buscarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buscarBoton.Image = ((System.Drawing.Image)(resources.GetObject("buscarBoton.Image")));
-            this.buscarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buscarBoton.Location = new System.Drawing.Point(720, 36);
-            this.buscarBoton.Name = "buscarBoton";
-            this.buscarBoton.Size = new System.Drawing.Size(164, 55);
-            this.buscarBoton.TabIndex = 2;
-            this.buscarBoton.Text = "Buscar";
-            this.buscarBoton.UseVisualStyleBackColor = true;
-            this.buscarBoton.Click += new System.EventHandler(this.buscarBoton_Click);
-            // 
             // BuscarnombreTexto
             // 
             this.BuscarnombreTexto.Location = new System.Drawing.Point(296, 51);
             this.BuscarnombreTexto.Name = "BuscarnombreTexto";
             this.BuscarnombreTexto.Size = new System.Drawing.Size(374, 22);
             this.BuscarnombreTexto.TabIndex = 1;
-            // 
-            // Cancelarbutton
-            // 
-            this.Cancelarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Cancelarbutton.Image")));
-            this.Cancelarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cancelarbutton.Location = new System.Drawing.Point(929, 435);
-            this.Cancelarbutton.Name = "Cancelarbutton";
-            this.Cancelarbutton.Size = new System.Drawing.Size(187, 44);
-            this.Cancelarbutton.TabIndex = 9;
-            this.Cancelarbutton.Text = "&Cancelar";
-            this.Cancelarbutton.UseVisualStyleBackColor = true;
-            this.Cancelarbutton.Click += new System.EventHandler(this.Cancelarbutton_Click);
-            // 
-            // Editarbutton
-            // 
-            this.Editarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Editarbutton.Image")));
-            this.Editarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Editarbutton.Location = new System.Drawing.Point(660, 435);
-            this.Editarbutton.Name = "Editarbutton";
-            this.Editarbutton.Size = new System.Drawing.Size(187, 44);
-            this.Editarbutton.TabIndex = 8;
-            this.Editarbutton.Text = "E&ditar";
-            this.Editarbutton.UseVisualStyleBackColor = true;
-            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
-            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(391, 435);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(187, 44);
-            this.Guardarbutton.TabIndex = 7;
-            this.Guardarbutton.Text = "&Guardar";
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
-            // 
-            // Nuevobutton
-            // 
-            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
-            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevobutton.Location = new System.Drawing.Point(122, 435);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(187, 44);
-            this.Nuevobutton.TabIndex = 6;
-            this.Nuevobutton.Text = "&Nuevo";
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // RazonSocialtextBox
             // 
@@ -334,6 +250,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proveedores";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(534, 155);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 20);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Número de Documento:";
             // 
             // UrltextBox
             // 
@@ -511,27 +437,101 @@
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 4;
             // 
-            // DocumentocomboBox1
+            // pictureBox1
             // 
-            this.DocumentocomboBox1.FormattingEnabled = true;
-            this.DocumentocomboBox1.Items.AddRange(new object[] {
-            "Documento",
-            "Razon Social"});
-            this.DocumentocomboBox1.Location = new System.Drawing.Point(31, 51);
-            this.DocumentocomboBox1.Name = "DocumentocomboBox1";
-            this.DocumentocomboBox1.Size = new System.Drawing.Size(220, 24);
-            this.DocumentocomboBox1.TabIndex = 9;
-            this.DocumentocomboBox1.Text = "Documento";
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Proveedor;
+            this.pictureBox1.Location = new System.Drawing.Point(236, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // imprimirBoton
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(534, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 20);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Número de Documento:";
+            this.imprimirBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imprimirBoton.Image = ((System.Drawing.Image)(resources.GetObject("imprimirBoton.Image")));
+            this.imprimirBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imprimirBoton.Location = new System.Drawing.Point(1080, 36);
+            this.imprimirBoton.Name = "imprimirBoton";
+            this.imprimirBoton.Size = new System.Drawing.Size(164, 55);
+            this.imprimirBoton.TabIndex = 4;
+            this.imprimirBoton.Text = "Imprimir";
+            this.imprimirBoton.UseVisualStyleBackColor = true;
+            // 
+            // EliminarBoton
+            // 
+            this.EliminarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarBoton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarBoton.Image")));
+            this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarBoton.Location = new System.Drawing.Point(900, 36);
+            this.EliminarBoton.Name = "EliminarBoton";
+            this.EliminarBoton.Size = new System.Drawing.Size(164, 55);
+            this.EliminarBoton.TabIndex = 3;
+            this.EliminarBoton.Text = "Eliminar";
+            this.EliminarBoton.UseVisualStyleBackColor = true;
+            this.EliminarBoton.Click += new System.EventHandler(this.EliminarBoton_Click);
+            // 
+            // buscarBoton
+            // 
+            this.buscarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buscarBoton.Image = ((System.Drawing.Image)(resources.GetObject("buscarBoton.Image")));
+            this.buscarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buscarBoton.Location = new System.Drawing.Point(720, 36);
+            this.buscarBoton.Name = "buscarBoton";
+            this.buscarBoton.Size = new System.Drawing.Size(164, 55);
+            this.buscarBoton.TabIndex = 2;
+            this.buscarBoton.Text = "Buscar";
+            this.buscarBoton.UseVisualStyleBackColor = true;
+            this.buscarBoton.Click += new System.EventHandler(this.buscarBoton_Click);
+            // 
+            // Cancelarbutton
+            // 
+            this.Cancelarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Cancelarbutton.Image")));
+            this.Cancelarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Cancelarbutton.Location = new System.Drawing.Point(929, 435);
+            this.Cancelarbutton.Name = "Cancelarbutton";
+            this.Cancelarbutton.Size = new System.Drawing.Size(187, 44);
+            this.Cancelarbutton.TabIndex = 9;
+            this.Cancelarbutton.Text = "&Cancelar";
+            this.Cancelarbutton.UseVisualStyleBackColor = true;
+            this.Cancelarbutton.Click += new System.EventHandler(this.Cancelarbutton_Click);
+            // 
+            // Editarbutton
+            // 
+            this.Editarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Editarbutton.Image")));
+            this.Editarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Editarbutton.Location = new System.Drawing.Point(660, 435);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(187, 44);
+            this.Editarbutton.TabIndex = 8;
+            this.Editarbutton.Text = "E&ditar";
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardarbutton.Location = new System.Drawing.Point(391, 435);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(187, 44);
+            this.Guardarbutton.TabIndex = 7;
+            this.Guardarbutton.Text = "&Guardar";
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Nuevobutton.Location = new System.Drawing.Point(122, 435);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(187, 44);
+            this.Nuevobutton.TabIndex = 6;
+            this.Nuevobutton.Text = "&Nuevo";
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // frmProveedor
             // 
@@ -546,7 +546,6 @@
             this.Name = "frmProveedor";
             this.Text = ".:.Mantenimiento de proveedores.:.";
             this.Load += new System.EventHandler(this.frmProveedor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIconoerrorProvider)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -555,6 +554,7 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

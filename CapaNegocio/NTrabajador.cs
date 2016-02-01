@@ -102,5 +102,14 @@ namespace CapaNegocio
             trabajador.TxtBuscar = txtBuscar;
             return trabajador.BuscarTrabajadorApellidos(trabajador);
         }
+
+        public static DataTable Login(string usuario, string password )
+        {
+            DTrabajador trabajador = new DTrabajador();
+            trabajador.Usuario = usuario;
+            trabajador.Password = password;
+            return trabajador.Login(trabajador);
+        }
+
     }
 }

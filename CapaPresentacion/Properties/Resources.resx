@@ -127,11 +127,20 @@
   <data name="1446700721_file" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1446700721_file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Proveedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proveedor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1447295218_testimonials" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1447295218_testimonials.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1446577202_gtk-dialog-error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1446577202_gtk-dialog-error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ventas01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ventas01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="compras1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compras.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sisVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sisVentas.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +148,17 @@
   <data name="consultas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\consultas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fondoBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondoBlanco.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="compras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\compras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1446787157_cocacola" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1446787157_cocacola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1446577202_gtk-dialog-error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1446577202_gtk-dialog-error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ventas03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ventas03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1446577801_DeleteRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1446577801_DeleteRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,9 +183,6 @@
   </data>
   <data name="blog-categories" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blog-categories.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ventas03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ventas03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1446577746_filequickprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1446577746_filequickprint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,7 +217,7 @@
   <data name="1446577060_new doc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1446577060_new doc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondoBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondoBlanco.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ventas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ventas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
