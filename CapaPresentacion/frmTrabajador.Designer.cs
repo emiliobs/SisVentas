@@ -276,9 +276,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(243, 32);
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources._1447295087_provider;
+            this.pictureBox1.Location = new System.Drawing.Point(243, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(95, 87);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -455,7 +456,7 @@
             this.tabControl.Location = new System.Drawing.Point(32, 103);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1287, 587);
+            this.tabControl.Size = new System.Drawing.Size(1449, 587);
             this.tabControl.TabIndex = 14;
             // 
             // tabPage1
@@ -471,7 +472,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1279, 558);
+            this.tabPage1.Size = new System.Drawing.Size(1441, 558);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -503,7 +504,7 @@
             this.dataListadoGridView1.ReadOnly = true;
             this.dataListadoGridView1.RowTemplate.Height = 24;
             this.dataListadoGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListadoGridView1.Size = new System.Drawing.Size(1213, 368);
+            this.dataListadoGridView1.Size = new System.Drawing.Size(1392, 368);
             this.dataListadoGridView1.TabIndex = 7;
             this.dataListadoGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoGridView1_CellContentClick);
             this.dataListadoGridView1.DoubleClick += new System.EventHandler(this.dataListadoGridView1_DoubleClick);
@@ -518,7 +519,7 @@
             // 
             this.TotalLabel.AutoSize = true;
             this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLabel.Location = new System.Drawing.Point(1076, 135);
+            this.TotalLabel.Location = new System.Drawing.Point(1255, 122);
             this.TotalLabel.Name = "TotalLabel";
             this.TotalLabel.Size = new System.Drawing.Size(57, 20);
             this.TotalLabel.TabIndex = 6;
@@ -540,7 +541,7 @@
             // 
             this.imprimirBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imprimirBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.imprimirBoton.Location = new System.Drawing.Point(1080, 36);
+            this.imprimirBoton.Location = new System.Drawing.Point(1259, 36);
             this.imprimirBoton.Name = "imprimirBoton";
             this.imprimirBoton.Size = new System.Drawing.Size(164, 55);
             this.imprimirBoton.TabIndex = 4;
@@ -551,7 +552,7 @@
             // 
             this.EliminarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarBoton.Location = new System.Drawing.Point(900, 36);
+            this.EliminarBoton.Location = new System.Drawing.Point(1024, 36);
             this.EliminarBoton.Name = "EliminarBoton";
             this.EliminarBoton.Size = new System.Drawing.Size(164, 55);
             this.EliminarBoton.TabIndex = 3;
@@ -563,7 +564,7 @@
             // 
             this.buscarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buscarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buscarBoton.Location = new System.Drawing.Point(720, 36);
+            this.buscarBoton.Location = new System.Drawing.Point(784, 34);
             this.buscarBoton.Name = "buscarBoton";
             this.buscarBoton.Size = new System.Drawing.Size(164, 55);
             this.buscarBoton.TabIndex = 2;
@@ -599,7 +600,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1344, 710);
+            this.ClientSize = new System.Drawing.Size(1493, 710);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);

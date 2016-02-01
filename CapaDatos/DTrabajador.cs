@@ -486,6 +486,39 @@ namespace CapaDatos
             sqlCon.Close();
             return dataTableResultado;
         }
+
+        public DataTable Login(DTrabajador trabajador)
+        {
+            DataTable dataTableResultado = new DataTable("trabajador");
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                sqlCon.ConnectionString = Conexion.Cn;
+                sqlCon.Open();
+                //comando:
+                SqlCommand cmd = new SqlCommand("spLogin", sqlCon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //parametros:
+                SqlParameter pUsuario = new SqlParameter("@Usuario", trabajador.usuario);
+                cmd.Parameters.Add(pUsuario);
+
+                SqlParameter pPassword = new SqlParameter("@Password", trabajador.Password);
+                cmd.Parameters.Add(pPassword);
+
+                //DataAdaptar:
+                SqlDataAdapter Da = new SqlDataAdapter(cmd);
+                Da.Fill(dataTableResultado);
+
+            }
+            catch (Exception)
+            {
+
+                dataTableResultado = null;
+            }
+
+            sqlCon.Close();
+            return dataTableResultado;
+        }
     }
 }
 
