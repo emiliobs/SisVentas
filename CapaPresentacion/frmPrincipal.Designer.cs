@@ -112,7 +112,7 @@
             // 
             this.salirToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources._1446577801_DeleteRed;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -166,6 +166,7 @@
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
             this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.ingresosToolStripMenuItem.Text = "Ingresos";
+            this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
@@ -187,13 +188,13 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -209,7 +210,7 @@
             // trabajadoresToolStripMenuItem
             // 
             this.trabajadoresToolStripMenuItem.Name = "trabajadoresToolStripMenuItem";
-            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem_Click);
             // 
