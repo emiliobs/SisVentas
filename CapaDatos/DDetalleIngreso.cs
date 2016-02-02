@@ -21,6 +21,7 @@ namespace CapaDatos
         private DateTime fechaProduccion;
         private DateTime fechaVencimiento;
 
+        //Contructores
         public DDetalleIngreso()
         { }
 
