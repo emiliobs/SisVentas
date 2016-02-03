@@ -27,15 +27,15 @@ namespace CapaDatos
 
         public DDetalleIngreso(int idDetalleIngreso, int idIngreso, int idArticulo, decimal precioCompra, decimal precioVenta, int stockInicial, int stockActual, DateTime fechaProduccion, DateTime fechaVencimiento)
         {
-            this.idDetalleIngreso = idDetalleIngreso;
-            this.idIngreso = idIngreso;
-            this.idArticulo = idArticulo;
-            this.precioCompra = precioCompra;
-            this.precioVenta = precioVenta;
-            this.stockInicial = stockInicial;
-            this.stockActual = stockActual;
-            this.fechaProduccion = fechaProduccion;
-            this.fechaVencimiento = fechaVencimiento;
+            this.IdDetalleIngreso = idDetalleIngreso;
+            this.IdIngreso = idIngreso;
+            this.IdArticulo = idArticulo;
+            this.PrecioCompra = precioCompra;
+            this.PrecioVenta = precioVenta;
+            this.StockInicial = stockInicial;
+            this.StockActual = stockActual;
+            this.FechaProduccion = fechaProduccion;
+            this.FechaVencimiento = fechaVencimiento;
         }
 
         public int IdDetalleIngreso
@@ -153,6 +153,64 @@ namespace CapaDatos
             {
                 fechaVencimiento = value;
             }
+        }
+
+        //Método Insertar:
+        public string Insertar(DDetalleIngreso detalleIngreso, ref SqlConnection SqlCon,
+                                ref SqlTransaction SQlTransaccion)
+        {
+            string respuesta = "";
+            //SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //SqlCon.ConnectionString = Conexion.Cn;
+                //SqlCon.Open();
+                //Establecer el Comando:
+                SqlCommand cmd = new SqlCommand("spInsertarDetalleIngreso", SqlCon);
+                cmd.Transaction = SQlTransaccion;
+                cmd.CommandType = CommandType.StoredProcedure;
+                //Parametros:
+                SqlParameter pIdDetalleIngreso = new SqlParameter("@IdDetalleIngreso", detalleIngreso.IdDetalleIngreso);
+                cmd.Parameters.Add(pIdDetalleIngreso);
+
+                SqlParameter pIdIngreso = new SqlParameter("@IdIngreso", detalleIngreso.IdIngreso);
+                cmd.Parameters.Add(pIdIngreso);
+
+                SqlParameter pIdArticulo = new SqlParameter("@IdArticulo", detalleIngreso.IdArticulo);
+                cmd.Parameters.Add(pIdArticulo);
+
+                SqlParameter pPrecioCompra = new SqlParameter("@PrecioCompra", detalleIngreso.PrecioCompra);
+                cmd.Parameters.Add(pPrecioCompra);
+
+                SqlParameter pPrecioVenta = new SqlParameter("@PrecioVenta", detalleIngreso.PrecioVenta);
+                cmd.Parameters.Add(pPrecioVenta);
+
+                SqlParameter pStockInicial = new SqlParameter("@StockInicial", detalleIngreso.StockInicial);
+                cmd.Parameters.Add(pStockInicial);
+
+                SqlParameter pStockActual = new SqlParameter("@StockActual", detalleIngreso.StockActual);
+                cmd.Parameters.Add(pStockActual);
+
+                SqlParameter pFechaProduccion = new SqlParameter("@FechaProduccion", detalleIngreso.FechaProduccion);
+                cmd.Parameters.Add(pFechaProduccion);
+
+                SqlParameter pFechaVencimiento = new SqlParameter("@FechaVencimiento", detalleIngreso.FechaVencimiento);
+                cmd.Parameters.Add(pFechaVencimiento);
+
+                
+                //Ejecutamos nuestro comando:
+                respuesta = cmd.ExecuteNonQuery() == 1 ? "OK" : "No se ingres el Resgistro.....";
+
+
+            }
+            catch (Exception ex)
+            {
+
+                respuesta = "ERROR: " + ex.Message;
+            }
+           
+
+            return respuesta;
         }
     }
 }
