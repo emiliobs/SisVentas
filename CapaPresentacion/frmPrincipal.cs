@@ -220,9 +220,10 @@ namespace CapaPresentacion
 
         private void ingresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmIngreso frm = new frmIngreso();
+            frmIngreso frm = frmIngreso.GetInstancia();
             frm.MdiParent = this;
             frm.Show();
+            frm.Idtrabajador = Convert.ToInt32(this.IdTrabajador);
         }
     }
 }

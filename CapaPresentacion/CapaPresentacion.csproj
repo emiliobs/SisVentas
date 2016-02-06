@@ -97,11 +97,23 @@
     <Compile Include="frmTrabajador.Designer.cs">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVistaArticuloIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaArticuloIngreso.Designer.cs">
+      <DependentUpon>frmVistaArticuloIngreso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVistaCategoriaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmVistaCategoriaArticulo.Designer.cs">
       <DependentUpon>frmVistaCategoriaArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVistaProveedorIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaProveedorIngreso.Designer.cs">
+      <DependentUpon>frmVistaProveedorIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -126,6 +138,9 @@
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmIngreso.resx">
+      <DependentUpon>frmIngreso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,8 +156,14 @@
     <EmbeddedResource Include="frmTrabajador.resx">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaArticuloIngreso.resx">
+      <DependentUpon>frmVistaArticuloIngreso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVistaCategoriaArticulo.resx">
       <DependentUpon>frmVistaCategoriaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaProveedorIngreso.resx">
+      <DependentUpon>frmVistaProveedorIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -251,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ventas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
