@@ -11,69 +11,69 @@ namespace CapaDatos
 {
    public class DIngreso
     {
-        //Variables:
-        private int idIngreso;
-        private int idTrabajador;
-        private int idProveedor;
-        private DateTime fecha;
-        private string tipoComprobante;
-        private string serie;
-        private string correlativo;
-        private decimal igv;
-        private string estado;
+        //Variables
+        private int _Idingreso;
+        private int _Idtrabajador;
+        private int _Idproveedor;
+        private DateTime _Fecha;
+        private string _Tipo_Comprobante;
+        private string _Serie;
+        private string _Correlativo;
+        private decimal _Igv;
+        private string _Estado;
 
-        public DIngreso() 
+        public DIngreso()
         { }
 
-        public DIngreso(int idIngreso, int idTrabajador, int idProveedor, DateTime fecha, string tipoComprobante, string serie, string correlativo, decimal igv, string estado)
+        public DIngreso(int _Idingreso, int _Idtrabajador, int _Idproveedor, DateTime _Fecha, string _Tipo_Comprobante, string _Serie, string _Correlativo, decimal _Igv, string _Estado)
         {
-            this.IdIngreso = idIngreso;
-            this.IdTrabajador = idTrabajador;
-            this.IdProveedor = idProveedor;
-            this.Fecha = fecha;
-            this.TipoComprobante = tipoComprobante;
-            this.Serie = serie;
-            this.Correlativo = correlativo;
-            this.Igv = igv;
-            this.Estado = estado;
+            this.Idingreso = _Idingreso;
+            this.Idtrabajador = _Idtrabajador;
+            this.Idproveedor = _Idproveedor;
+            this.Fecha = _Fecha;
+            this.Tipo_Comprobante = _Tipo_Comprobante;
+            this.Serie = _Serie;
+            this.Correlativo = _Correlativo;
+            this.Igv = _Igv;
+            this.Estado = _Estado;
         }
 
-        public int IdIngreso
+        public int Idingreso
         {
             get
             {
-                return idIngreso;
+                return _Idingreso;
             }
 
             set
             {
-                idIngreso = value;
+                _Idingreso = value;
             }
         }
 
-        public int IdTrabajador
+        public int Idtrabajador
         {
             get
             {
-                return idTrabajador;
+                return _Idtrabajador;
             }
 
             set
             {
-                idTrabajador = value;
+                _Idtrabajador = value;
             }
         }
 
-        public int IdProveedor
+        public int Idproveedor
         {
             get
             {
-                return idProveedor;
+                return _Idproveedor;
             }
 
             set
             {
-                idProveedor = value;
+                _Idproveedor = value;
             }
         }
 
@@ -81,25 +81,25 @@ namespace CapaDatos
         {
             get
             {
-                return fecha;
+                return _Fecha;
             }
 
             set
             {
-                fecha = value;
+                _Fecha = value;
             }
         }
 
-        public string TipoComprobante
+        public string Tipo_Comprobante
         {
             get
             {
-                return tipoComprobante;
+                return _Tipo_Comprobante;
             }
 
             set
             {
-                tipoComprobante = value;
+                _Tipo_Comprobante = value;
             }
         }
 
@@ -107,12 +107,12 @@ namespace CapaDatos
         {
             get
             {
-                return serie;
+                return _Serie;
             }
 
             set
             {
-                serie = value;
+                _Serie = value;
             }
         }
 
@@ -120,12 +120,12 @@ namespace CapaDatos
         {
             get
             {
-                return correlativo;
+                return _Correlativo;
             }
 
             set
             {
-                correlativo = value;
+                _Correlativo = value;
             }
         }
 
@@ -133,12 +133,12 @@ namespace CapaDatos
         {
             get
             {
-                return igv;
+                return _Igv;
             }
 
             set
             {
-                igv = value;
+                _Igv = value;
             }
         }
 
@@ -146,232 +146,271 @@ namespace CapaDatos
         {
             get
             {
-                return estado;
+                return _Estado;
             }
 
             set
             {
-                estado = value;
+                _Estado = value;
             }
         }
 
-        //Metodos:
-        public string Insertar(DIngreso Ingreso, List<DDetalleIngreso> DetalleIngreso)
+        //Métodos
+        public string Insertar(DIngreso Ingreso,List<DDetalle_Ingreso> Detalle)
         {
-            string respuesta = "";
+            string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
+                //Código
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCon.Open();
-                //Establecer la transacción:
-                SqlTransaction SqlTransaccion = SqlCon.BeginTransaction();
-                //Establecer el Comando:
-                SqlCommand cmd = new SqlCommand("spInsertarIngreso", SqlCon);
-                cmd.Transaction = SqlTransaccion;
-                cmd.CommandType = CommandType.StoredProcedure;
-                //Parametros:
-                SqlParameter pIdIngreso = new SqlParameter("@IdIngreso", Ingreso.IdTrabajador);
-                cmd.Parameters.Add(pIdIngreso);
+                //Establecer la trasacción
+                SqlTransaction SqlTra = SqlCon.BeginTransaction();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.Transaction = SqlTra;
+                SqlCmd.CommandText = "spinsertar_ingreso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter pIdtrabajador = new SqlParameter("@Idtrabajador", Ingreso.IdTrabajador);
-                cmd.Parameters.Add(pIdtrabajador);
+                SqlParameter ParIdingreso = new SqlParameter();
+                ParIdingreso.ParameterName = "@idingreso";
+                ParIdingreso.SqlDbType = SqlDbType.Int;
+                ParIdingreso.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdingreso);
 
-                SqlParameter pIdProveedor = new SqlParameter("@IdProveedor",Ingreso.IdProveedor);
-                cmd.Parameters.Add(pIdProveedor);
+                SqlParameter ParIdtrabajador = new SqlParameter();
+                ParIdtrabajador.ParameterName = "@idtrabajador";
+                ParIdtrabajador.SqlDbType = SqlDbType.Int;
+                ParIdtrabajador.Value = Ingreso.Idtrabajador;
+                SqlCmd.Parameters.Add(ParIdtrabajador);
 
-                SqlParameter pFecha = new SqlParameter("@Fecha", Ingreso.Fecha);
-                cmd.Parameters.Add(pFecha);
-
-                SqlParameter pTipoComprobante = new SqlParameter("@TipoComprobante", Ingreso.TipoComprobante);
-                cmd.Parameters.Add(pTipoComprobante);
-
-                SqlParameter pSerie = new SqlParameter("@Serie", Ingreso.Serie);
-                cmd.Parameters.Add(pSerie);
-
-                SqlParameter pCorrelativo = new SqlParameter("@Correlativo", Ingreso.Correlativo);
-                cmd.Parameters.Add(pCorrelativo);
-
-
-                SqlParameter pIgv = new SqlParameter("@Igv", Ingreso.Igv);
-                cmd.Parameters.Add(pIgv);
-                
-                SqlParameter pEstado = new SqlParameter("@Estado", Ingreso.Estado);
-                cmd.Parameters.Add(pEstado);
+                SqlParameter ParIdproveedor = new SqlParameter();
+                ParIdproveedor.ParameterName = "@idproveedor";
+                ParIdproveedor.SqlDbType = SqlDbType.Int;
+                ParIdproveedor.Value = Ingreso.Idproveedor;
+                SqlCmd.Parameters.Add(ParIdproveedor);
 
 
-                //Ejecutamos nuestro comando:
-                respuesta = cmd.ExecuteNonQuery() == 1 ? "OK" : "No se ingres el Resgistro.....";
+                SqlParameter ParFecha = new SqlParameter();
+                ParFecha.ParameterName = "@fecha";
+                ParFecha.SqlDbType = SqlDbType.Date;
+                ParFecha.Value = Ingreso.Fecha;
+                SqlCmd.Parameters.Add(ParFecha);
 
-                //Si pudo hacer el ingreso - entonces ingreso los detalles a ddetallesiINgreso:
-                if (respuesta.Equals("OK"))
+                SqlParameter ParTipo_Comprobante = new SqlParameter();
+                ParTipo_Comprobante.ParameterName = "@tipo_comprobante";
+                ParTipo_Comprobante.SqlDbType = SqlDbType.VarChar;
+                ParTipo_Comprobante.Size = 20;
+                ParTipo_Comprobante.Value = Ingreso.Tipo_Comprobante;
+                SqlCmd.Parameters.Add(ParTipo_Comprobante);
+
+                SqlParameter ParSerie = new SqlParameter();
+                ParSerie.ParameterName = "@serie";
+                ParSerie.SqlDbType = SqlDbType.VarChar;
+                ParSerie.Size = 4;
+                ParSerie.Value = Ingreso.Serie;
+                SqlCmd.Parameters.Add(ParSerie);
+
+                SqlParameter ParCorrelativo = new SqlParameter();
+                ParCorrelativo.ParameterName = "@correlativo";
+                ParCorrelativo.SqlDbType = SqlDbType.VarChar;
+                ParCorrelativo.Size = 7;
+                ParCorrelativo.Value = Ingreso.Correlativo;
+                SqlCmd.Parameters.Add(ParCorrelativo);
+
+                SqlParameter ParIgv = new SqlParameter();
+                ParIgv.ParameterName = "@igv";
+                ParIgv.SqlDbType = SqlDbType.Decimal;
+                ParIgv.Precision = 4;
+                ParIgv.Scale = 2;
+                ParIgv.Value = Ingreso.Igv;
+                SqlCmd.Parameters.Add(ParIgv);
+
+                SqlParameter ParEstado = new SqlParameter();
+                ParEstado.ParameterName = "@estado";
+                ParEstado.SqlDbType = SqlDbType.VarChar;
+                ParEstado.Size = 7;
+                ParEstado.Value = Ingreso.Estado;
+                SqlCmd.Parameters.Add(ParEstado);
+
+                //Ejecutamos nuestro comando
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+                if (rpta.Equals("OK"))
                 {
-                    //Obtener el código del ingreso generado:
-                    this.IdIngreso = Convert.ToInt32(cmd.Parameters["@IdIngreso"].Value);
-
-                    foreach (DDetalleIngreso detalleIngresode  in DetalleIngreso)
+                    //Obtener el código del ingreso generado
+                    this.Idingreso = Convert.ToInt32(SqlCmd.Parameters["@idingreso"].Value);
+                    foreach (DDetalle_Ingreso det in Detalle)
                     {
-                        detalleIngresode.IdIngreso = this.IdIngreso;
-
-                        //Llamar al método intertar de la la clase DDetalleIngreso:
-                        respuesta = detalleIngresode.Insertar(detalleIngresode,ref SqlCon, ref SqlTransaccion);
-
-                        if (!respuesta.Equals("OK"))
+                        det.Idingreso = this.Idingreso;
+                        //Llamar al método insertar de la clase DDetalle_Ingreso
+                        rpta = det.Insertar(det,ref SqlCon,ref SqlTra);
+                        if (!rpta.Equals("OK"))
                         {
                             break;
                         }
                     }
-                }
 
-                //Evaluo la variable respuesta si es true o false:
-                if (respuesta.Equals("OK"))
+                }
+                if (rpta.Equals("OK"))
                 {
-                    SqlTransaccion.Commit();
+                    SqlTra.Commit();
                 }
                 else
                 {
-                    SqlTransaccion.Rollback();
+                    SqlTra.Rollback();
                 }
+                
 
             }
             catch (Exception ex)
             {
-
-                respuesta = "ERROR: " + ex.Message;
+                rpta = ex.Message;
             }
             finally
             {
-                if (SqlCon.State == ConnectionState.Open)
-                {
-                    SqlCon.Close();
-                }
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
+            return rpta;
 
-            return respuesta;
         }
-
-        //Método Anular:  
         public string Anular(DIngreso Ingreso)
         {
-            string respuesta = string.Empty;
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spanular_ingreso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdingreso = new SqlParameter();
+                ParIdingreso.ParameterName = "@idingreso";
+                ParIdingreso.SqlDbType = SqlDbType.Int;
+                ParIdingreso.Value = Ingreso.Idingreso;
+                SqlCmd.Parameters.Add(ParIdingreso);
+
+
+                //Ejecutamos nuestro comando
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se anulo el Registro";
+
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+
+        //Método Mostrar
+        public DataTable Mostrar()
+        {
+            DataTable DtResultado = new DataTable("ingreso");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
-                SqlCon.Open();
-                //Comando:
-                SqlCommand cmd = new SqlCommand("spAnularIngreso", SqlCon);
-                cmd.CommandType = CommandType.StoredProcedure;
-                //parametros:
-                SqlParameter pIdIngreso = new SqlParameter("@IdIngreso", Ingreso.IdIngreso);
-                cmd.Parameters.Add(pIdIngreso);
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_ingreso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                respuesta = cmd.ExecuteNonQuery() == 1 ? "OK" : "NO Se Anulo el Registro.....";
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
 
             }
             catch (Exception ex)
             {
-
-                respuesta = "ERROR: " + ex.Message;
+                DtResultado = null;
             }
-            finally
-            {
-                if (SqlCon.State == ConnectionState.Open)
-                {
-                    SqlCon.Close();
-                }
-            }
+            return DtResultado;
 
-            return respuesta;
         }
 
-        //Meétodo mostrar todos los valores de Ingreso:
-        public DataTable Mostrar()
+
+        //Método Buscarfechas
+        public DataTable BuscarFechas(String TextoBuscar,String TextoBuscar2)
         {
-            DataTable dataTableResultado = new DataTable("ingreso");
-            SqlConnection sqlCon = new SqlConnection();
+            DataTable DtResultado = new DataTable("ingreso");
+            SqlConnection SqlCon = new SqlConnection();
             try
             {
-                sqlCon.ConnectionString = Conexion.Cn;
-                sqlCon.Open();
-                //comando;
-                SqlCommand cmd = new SqlCommand("spMostrarIngreso", sqlCon);
-                cmd.CommandType = CommandType.StoredProcedure;
-                //dataAdapter
-                SqlDataAdapter Da = new SqlDataAdapter(cmd);
-                Da.Fill(dataTableResultado);
-            }
-            catch (Exception)
-            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_ingreso_fecha";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                dataTableResultado = null;
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlParameter ParTextoBuscar2 = new SqlParameter();
+                ParTextoBuscar2.ParameterName = "@textobuscar2";
+                ParTextoBuscar2.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar2.Size = 50;
+                ParTextoBuscar2.Value = TextoBuscar2;
+                SqlCmd.Parameters.Add(ParTextoBuscar2);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
             }
-            sqlCon.Close();
-            return dataTableResultado;
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
         }
 
-        //Método buscarfehas de Ingreso:
-        public DataTable BuscarIngresoFecha(string txtBuscar, string txtBuscar2)
+
+        public DataTable MostrarDetalle(String TextoBuscar)
         {
-            DataTable dataTableResultado = new DataTable("ingreso");
-            SqlConnection sqlCon = new SqlConnection();
+            DataTable DtResultado = new DataTable("detalle_ingreso");
+            SqlConnection SqlCon = new SqlConnection();
             try
             {
-                sqlCon.ConnectionString = Conexion.Cn;
-                sqlCon.Open();
-                //comando:
-                SqlCommand cmd = new SqlCommand("spBuscarIngresoFecha", sqlCon);
-                cmd.CommandType = CommandType.StoredProcedure;
-                //parametros:
-                SqlParameter ptxtBuscar = new SqlParameter("@txtBuscar", txtBuscar);
-                cmd.Parameters.Add(ptxtBuscar);
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_detalle_ingreso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter ptxtBuscar2 = new SqlParameter("@txtBuscar2", txtBuscar2);
-                cmd.Parameters.Add(ptxtBuscar2);
-                //DataAdaptar:
-                SqlDataAdapter Da = new SqlDataAdapter(cmd);
-                Da.Fill(dataTableResultado);
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                dataTableResultado = null;
+                DtResultado = null;
             }
+            return DtResultado;
 
-            sqlCon.Close();
-            return dataTableResultado;
-        }
-
-        //Método spMostrarDetalleIngreso
-        public DataTable MostrarDetalleIngreso(string txtBuscar)
-        {
-            DataTable dataTableResultado = new DataTable("ingreso");
-            SqlConnection sqlCon = new SqlConnection();
-            try
-            {
-                sqlCon.ConnectionString = Conexion.Cn;
-                sqlCon.Open();
-                //comando:
-                SqlCommand cmd = new SqlCommand("spMostrarDetalleIngreso", sqlCon);
-                cmd.CommandType = CommandType.StoredProcedure;
-                //parametros:
-                SqlParameter ptxtBuscar = new SqlParameter("@txtBuscar", txtBuscar);
-                cmd.Parameters.Add(ptxtBuscar);
-                              
-                //DataAdaptar:
-                SqlDataAdapter Da = new SqlDataAdapter(cmd);
-                Da.Fill(dataTableResultado);
-
-            }
-            catch (Exception)
-            {
-
-                dataTableResultado = null;
-            }
-
-            sqlCon.Close();
-            return dataTableResultado;
         }
     }
 }

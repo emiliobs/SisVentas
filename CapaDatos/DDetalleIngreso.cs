@@ -3,214 +3,189 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//
+
 using System.Data;
 using System.Data.SqlClient;
+
 namespace CapaDatos
 {
-   public class DDetalleIngreso
+    public class DDetalle_Ingreso
     {
-        //variables:
-        private int idDetalleIngreso;
-        private int idIngreso;
-        private int idArticulo;
-        private decimal precioCompra;
-        private decimal precioVenta;
-        private int stockInicial;
-        private int stockActual;
-        private DateTime fechaProduccion;
-        private DateTime fechaVencimiento;
+        //Variables
+        private int _Iddetalle_Ingreso;
+        private int _Idingreso;
+        private int _Idarticulo;
+        private decimal _Precio_Compra;
+        private decimal _Precio_Venta;
+        private int _Stock_Inicial;
+        private int _Stock_Actual;
+        private DateTime _Fecha_Produccion;
+        private DateTime _Fecha_Vencimiento;
 
-        //Contructores
-        public DDetalleIngreso()
-        { }
-
-        public DDetalleIngreso(int idDetalleIngreso, int idIngreso, int idArticulo, decimal precioCompra, decimal precioVenta, int stockInicial, int stockActual, DateTime fechaProduccion, DateTime fechaVencimiento)
+        //Propiedades
+        public int Iddetalle_Ingreso
         {
-            this.IdDetalleIngreso = idDetalleIngreso;
-            this.IdIngreso = idIngreso;
-            this.IdArticulo = idArticulo;
-            this.PrecioCompra = precioCompra;
-            this.PrecioVenta = precioVenta;
-            this.StockInicial = stockInicial;
-            this.StockActual = stockActual;
-            this.FechaProduccion = fechaProduccion;
-            this.FechaVencimiento = fechaVencimiento;
+            get { return _Iddetalle_Ingreso; }
+            set { _Iddetalle_Ingreso = value; }
         }
 
-        public int IdDetalleIngreso
-        {
-            get
-            {
-                return idDetalleIngreso;
-            }
 
-            set
-            {
-                idDetalleIngreso = value;
-            }
+        public int Idingreso
+        {
+            get { return _Idingreso; }
+            set { _Idingreso = value; }
         }
 
-        public int IdIngreso
+        public int Idarticulo
         {
-            get
-            {
-                return idIngreso;
-            }
-
-            set
-            {
-                idIngreso = value;
-            }
+            get { return _Idarticulo; }
+            set { _Idarticulo = value; }
         }
 
-        public int IdArticulo
-        {
-            get
-            {
-                return idArticulo;
-            }
 
-            set
-            {
-                idArticulo = value;
-            }
+        public decimal Precio_Compra
+        {
+            get { return _Precio_Compra; }
+            set { _Precio_Compra = value; }
         }
 
-        public decimal PrecioCompra
+        public decimal Precio_Venta
         {
-            get
-            {
-                return precioCompra;
-            }
-
-            set
-            {
-                precioCompra = value;
-            }
+            get { return _Precio_Venta; }
+            set { _Precio_Venta = value; }
         }
 
-        public decimal PrecioVenta
+        public int Stock_Inicial
         {
-            get
-            {
-                return precioVenta;
-            }
-
-            set
-            {
-                precioVenta = value;
-            }
+            get { return _Stock_Inicial; }
+            set { _Stock_Inicial = value; }
         }
 
-        public int StockInicial
-        {
-            get
-            {
-                return stockInicial;
-            }
 
-            set
-            {
-                stockInicial = value;
-            }
+        public int Stock_Actual
+        {
+            get { return _Stock_Actual; }
+            set { _Stock_Actual = value; }
         }
 
-        public int StockActual
+        public DateTime Fecha_Produccion
         {
-            get
-            {
-                return stockActual;
-            }
-
-            set
-            {
-                stockActual = value;
-            }
+            get { return _Fecha_Produccion; }
+            set { _Fecha_Produccion = value; }
         }
 
-        public DateTime FechaProduccion
+        public DateTime Fecha_Vencimiento
         {
-            get
-            {
-                return fechaProduccion;
-            }
+            get { return _Fecha_Vencimiento; }
+            set { _Fecha_Vencimiento = value; }
+        }
+        //Constructores 
+        public DDetalle_Ingreso()
+        {
 
-            set
-            {
-                fechaProduccion = value;
-            }
+        }
+        public DDetalle_Ingreso(int iddetalle_ingreso, int idingreso,
+            int idarticulo, decimal precio_compra, decimal precio_venta,
+            int stock_inicial, int stock_actual, DateTime fecha_produccion,
+            DateTime fecha_vencimiento)
+        {
+            this.Iddetalle_Ingreso = iddetalle_ingreso;
+            this.Idingreso = idingreso;
+            this.Idarticulo = idarticulo;
+            this.Precio_Compra = precio_compra;
+            this.Precio_Venta = precio_venta;
+            this.Stock_Inicial = stock_inicial;
+            this.Stock_Actual = stock_actual;
+            this.Fecha_Produccion = fecha_produccion;
+            this.Fecha_Vencimiento = fecha_vencimiento;
+
         }
 
-        public DateTime FechaVencimiento
+        //Método Insertar
+        public string Insertar(DDetalle_Ingreso Detalle_Ingreso,
+            ref SqlConnection SqlCon, ref SqlTransaction SqlTra)
         {
-            get
-            {
-                return fechaVencimiento;
-            }
-
-            set
-            {
-                fechaVencimiento = value;
-            }
-        }
-
-        //Método Insertar:
-        public string Insertar(DDetalleIngreso detalleIngreso, ref SqlConnection SqlCon,
-                                ref SqlTransaction SQlTransaccion)
-        {
-            string respuesta = "";
-            //SqlConnection SqlCon = new SqlConnection();
+            string rpta = "";
             try
             {
-                //SqlCon.ConnectionString = Conexion.Cn;
-                //SqlCon.Open();
-                //Establecer el Comando:
-                SqlCommand cmd = new SqlCommand("spInsertarDetalleIngreso", SqlCon);
-                cmd.Transaction = SQlTransaccion;
-                cmd.CommandType = CommandType.StoredProcedure;
-                //Parametros:
-                SqlParameter pIdDetalleIngreso = new SqlParameter("@IdDetalleIngreso", detalleIngreso.IdDetalleIngreso);
-                cmd.Parameters.Add(pIdDetalleIngreso);
 
-                SqlParameter pIdIngreso = new SqlParameter("@IdIngreso", detalleIngreso.IdIngreso);
-                cmd.Parameters.Add(pIdIngreso);
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.Transaction = SqlTra;
+                SqlCmd.CommandText = "spinsertar_detalle_ingreso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter pIdArticulo = new SqlParameter("@IdArticulo", detalleIngreso.IdArticulo);
-                cmd.Parameters.Add(pIdArticulo);
+                SqlParameter ParIddetalle_Ingreso = new SqlParameter();
+                ParIddetalle_Ingreso.ParameterName = "@iddetalle_ingreso";
+                ParIddetalle_Ingreso.SqlDbType = SqlDbType.Int;
+                ParIddetalle_Ingreso.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIddetalle_Ingreso);
 
-                SqlParameter pPrecioCompra = new SqlParameter("@PrecioCompra", detalleIngreso.PrecioCompra);
-                cmd.Parameters.Add(pPrecioCompra);
+                SqlParameter ParIdingreso = new SqlParameter();
+                ParIdingreso.ParameterName = "@idingreso";
+                ParIdingreso.SqlDbType = SqlDbType.Int;
+                ParIdingreso.Value = Detalle_Ingreso.Idingreso;
+                SqlCmd.Parameters.Add(ParIdingreso);
 
-                SqlParameter pPrecioVenta = new SqlParameter("@PrecioVenta", detalleIngreso.PrecioVenta);
-                cmd.Parameters.Add(pPrecioVenta);
+                SqlParameter ParIdarticulo = new SqlParameter();
+                ParIdarticulo.ParameterName = "@idarticulo";
+                ParIdarticulo.SqlDbType = SqlDbType.Int;
+                ParIdarticulo.Value = Detalle_Ingreso.Idarticulo;
+                SqlCmd.Parameters.Add(ParIdarticulo);
 
-                SqlParameter pStockInicial = new SqlParameter("@StockInicial", detalleIngreso.StockInicial);
-                cmd.Parameters.Add(pStockInicial);
 
-                SqlParameter pStockActual = new SqlParameter("@StockActual", detalleIngreso.StockActual);
-                cmd.Parameters.Add(pStockActual);
+                SqlParameter ParPrecio_Compra = new SqlParameter();
+                ParPrecio_Compra.ParameterName = "@precio_compra";
+                ParPrecio_Compra.SqlDbType = SqlDbType.Money;
+                ParPrecio_Compra.Value = Detalle_Ingreso.Precio_Compra;
+                SqlCmd.Parameters.Add(ParPrecio_Compra);
 
-                SqlParameter pFechaProduccion = new SqlParameter("@FechaProduccion", detalleIngreso.FechaProduccion);
-                cmd.Parameters.Add(pFechaProduccion);
+                SqlParameter ParPrecio_Venta = new SqlParameter();
+                ParPrecio_Venta.ParameterName = "@precio_venta";
+                ParPrecio_Venta.SqlDbType = SqlDbType.Money;
+                ParPrecio_Venta.Value = Detalle_Ingreso.Precio_Venta;
+                SqlCmd.Parameters.Add(ParPrecio_Venta);
 
-                SqlParameter pFechaVencimiento = new SqlParameter("@FechaVencimiento", detalleIngreso.FechaVencimiento);
-                cmd.Parameters.Add(pFechaVencimiento);
 
-                
-                //Ejecutamos nuestro comando:
-                respuesta = cmd.ExecuteNonQuery() == 1 ? "OK" : "No se ingres el Resgistro.....";
+                SqlParameter ParStock_Actual = new SqlParameter();
+                ParStock_Actual.ParameterName = "@stock_actual";
+                ParStock_Actual.SqlDbType = SqlDbType.Int;
+                ParStock_Actual.Value = Detalle_Ingreso.Stock_Actual;
+                SqlCmd.Parameters.Add(ParStock_Actual);
+
+                SqlParameter ParStock_Inicial = new SqlParameter();
+                ParStock_Inicial.ParameterName = "@stock_inicial";
+                ParStock_Inicial.SqlDbType = SqlDbType.Int;
+                ParStock_Inicial.Value = Detalle_Ingreso.Stock_Inicial;
+                SqlCmd.Parameters.Add(ParStock_Inicial);
+
+                SqlParameter ParFecha_Produccion = new SqlParameter();
+                ParFecha_Produccion.ParameterName = "@fecha_produccion";
+                ParFecha_Produccion.SqlDbType = SqlDbType.Date;
+                ParFecha_Produccion.Value = Detalle_Ingreso.Fecha_Produccion;
+                SqlCmd.Parameters.Add(ParFecha_Produccion);
+
+                SqlParameter ParFecha_Vencimiento = new SqlParameter();
+                ParFecha_Vencimiento.ParameterName = "@fecha_vencimiento";
+                ParFecha_Vencimiento.SqlDbType = SqlDbType.Date;
+                ParFecha_Vencimiento.Value = Detalle_Ingreso.Fecha_Vencimiento;
+                SqlCmd.Parameters.Add(ParFecha_Vencimiento);
+
+                //Ejecutamos nuestro comando
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
 
 
             }
             catch (Exception ex)
             {
-
-                respuesta = "ERROR: " + ex.Message;
+                rpta = ex.Message;
             }
-           
 
-            return respuesta;
+            return rpta;
+
         }
+
     }
 }

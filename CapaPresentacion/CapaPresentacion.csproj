@@ -61,11 +61,11 @@
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmIngreso.cs">
+    <Compile Include="FrmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIngreso.Designer.cs">
-      <DependentUpon>frmIngreso.cs</DependentUpon>
+    <Compile Include="FrmIngreso.Designer.cs">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -97,11 +97,11 @@
     <Compile Include="frmTrabajador.Designer.cs">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVistaArticuloIngreso.cs">
+    <Compile Include="FrmVistaArticulo_Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVistaArticuloIngreso.Designer.cs">
-      <DependentUpon>frmVistaArticuloIngreso.cs</DependentUpon>
+    <Compile Include="FrmVistaArticulo_Ingreso.Designer.cs">
+      <DependentUpon>FrmVistaArticulo_Ingreso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVistaCategoriaArticulo.cs">
       <SubType>Form</SubType>
@@ -109,11 +109,11 @@
     <Compile Include="frmVistaCategoriaArticulo.Designer.cs">
       <DependentUpon>frmVistaCategoriaArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVistaProveedorIngreso.cs">
+    <Compile Include="FrmVistaProveedor_Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVistaProveedorIngreso.Designer.cs">
-      <DependentUpon>frmVistaProveedorIngreso.cs</DependentUpon>
+    <Compile Include="FrmVistaProveedor_Ingreso.Designer.cs">
+      <DependentUpon>FrmVistaProveedor_Ingreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -138,8 +138,8 @@
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmIngreso.resx">
-      <DependentUpon>frmIngreso.cs</DependentUpon>
+    <EmbeddedResource Include="FrmIngreso.resx">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -156,14 +156,14 @@
     <EmbeddedResource Include="frmTrabajador.resx">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVistaArticuloIngreso.resx">
-      <DependentUpon>frmVistaArticuloIngreso.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVistaArticulo_Ingreso.resx">
+      <DependentUpon>FrmVistaArticulo_Ingreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVistaCategoriaArticulo.resx">
       <DependentUpon>frmVistaCategoriaArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVistaProveedorIngreso.resx">
-      <DependentUpon>frmVistaProveedorIngreso.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVistaProveedor_Ingreso.resx">
+      <DependentUpon>FrmVistaProveedor_Ingreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

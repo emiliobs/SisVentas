@@ -19,5 +19,5 @@ C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmPrincipal.resources
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmIngreso.resources
-C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaArticuloIngreso.resources
-C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaProveedorIngreso.resources
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaProveedor_Ingreso.resources
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Ingreso.resources
