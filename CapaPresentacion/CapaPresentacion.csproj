@@ -49,6 +49,12 @@
     <Compile Include="frmArticulo.Designer.cs">
       <DependentUpon>frmArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmArticuloVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmArticuloVenta.Designer.cs">
+      <DependentUpon>FrmArticuloVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,12 @@
     </Compile>
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteVenta.Designer.cs">
+      <DependentUpon>frmClienteVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIngreso.cs">
       <SubType>Form</SubType>
@@ -96,6 +108,12 @@
     </Compile>
     <Compile Include="frmTrabajador.Designer.cs">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVenta.Designer.cs">
+      <DependentUpon>frmVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVistaArticulo_Ingreso.cs">
       <SubType>Form</SubType>
