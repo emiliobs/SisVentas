@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FrmArticuloVenta
+    partial class frmVistaArticuloVenta
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "FrmArticuloVenta";
+            this.Text = "frmVistaArticuloVenta";
         }
 
         #endregion

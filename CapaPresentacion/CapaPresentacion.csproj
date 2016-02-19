@@ -49,12 +49,6 @@
     <Compile Include="frmArticulo.Designer.cs">
       <DependentUpon>frmArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmArticuloVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmArticuloVenta.Designer.cs">
-      <DependentUpon>FrmArticuloVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +60,6 @@
     </Compile>
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmClienteVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmClienteVenta.Designer.cs">
-      <DependentUpon>frmClienteVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIngreso.cs">
       <SubType>Form</SubType>
@@ -115,6 +103,12 @@
     <Compile Include="frmVenta.Designer.cs">
       <DependentUpon>frmVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVistaArticuloVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaArticuloVenta.Designer.cs">
+      <DependentUpon>frmVistaArticuloVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVistaArticulo_Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +120,12 @@
     </Compile>
     <Compile Include="frmVistaCategoriaArticulo.Designer.cs">
       <DependentUpon>frmVistaCategoriaArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVistaClienteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaClienteVenta.Designer.cs">
+      <DependentUpon>frmVistaClienteVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVistaProveedor_Ingreso.cs">
       <SubType>Form</SubType>
@@ -173,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrabajador.resx">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVenta.resx">
+      <DependentUpon>frmVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVistaArticulo_Ingreso.resx">
       <DependentUpon>FrmVistaArticulo_Ingreso.cs</DependentUpon>
@@ -296,6 +299,121 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\agregar32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\agregar_p.png" />
+    <None Include="Resources\Ver_recibo1.png" />
+    <None Include="Resources\ventasrealizadas11.png" />
+    <None Include="Resources\ventasrealizadas2.png" />
+    <None Include="Resources\ventas21.png" />
+    <None Include="Resources\ventas_m1.png" />
+    <None Include="Resources\Users 21.png" />
+    <None Include="Resources\testtube1.png" />
+    <None Include="Resources\Tag1.png" />
+    <None Include="Resources\restaurar1.png" />
+    <None Include="Resources\report1.png" />
+    <None Include="Resources\Remove11.png" />
+    <None Include="Resources\Remove2.png" />
+    <None Include="Resources\proveedores_m1.png" />
+    <None Include="Resources\productos_m11.png" />
+    <None Include="Resources\productos_m2.png" />
+    <None Include="Resources\pencil-scale1.png" />
+    <None Include="Resources\onebit_201.png" />
+    <None Include="Resources\nuevo1.png" />
+    <None Include="Resources\My Icons1.png" />
+    <None Include="Resources\modificar1.png" />
+    <None Include="Resources\leather-bag1.png" />
+    <None Include="Resources\imprimir1.png" />
+    <None Include="Resources\graduation-hat1.png" />
+    <None Include="Resources\folder11.png" />
+    <None Include="Resources\folder2.png" />
+    <None Include="Resources\file_delete1.png" />
+    <None Include="Resources\file_add1.png" />
+    <None Include="Resources\file1.png" />
+    <None Include="Resources\error21.png" />
+    <None Include="Resources\empleados_b1.png" />
+    <None Include="Resources\eliminar1.png" />
+    <None Include="Resources\door_in11.png" />
+    <None Include="Resources\door_in2.png" />
+    <None Include="Resources\documento1.png" />
+    <None Include="Resources\disco1.png" />
+    <None Include="Resources\Database1.png" />
+    <None Include="Resources\consultas1.png" />
+    <None Include="Resources\comprasrealizadas1.png" />
+    <None Include="Resources\comprasdetalladas1.png" />
+    <None Include="Resources\compra_m1.png" />
+    <None Include="Resources\compra_b11.png" />
+    <None Include="Resources\compra_b2.png" />
+    <None Include="Resources\coins_add1.png" />
+    <None Include="Resources\cog11.png" />
+    <None Include="Resources\cog2.png" />
+    <None Include="Resources\cliente_m1.png" />
+    <None Include="Resources\categoria1.png" />
+    <None Include="Resources\cancel1.png" />
+    <None Include="Resources\caja_m1.png" />
+    <None Include="Resources\caja_b1.png" />
+    <None Include="Resources\Buscar_p1.png" />
+    <None Include="Resources\Buscar1.png" />
+    <None Include="Resources\Buscadetalle_p1.png" />
+    <None Include="Resources\Box1.png" />
+    <None Include="Resources\Banned User1.png" />
+    <None Include="Resources\archivo1.png" />
+    <None Include="Resources\agregar_p1.png" />
+    <Content Include="Resources\archivo.png" />
+    <Content Include="Resources\Banned User.png" />
+    <Content Include="Resources\Box.png" />
+    <Content Include="Resources\Buscadetalle_p.png" />
+    <Content Include="Resources\Buscar.png" />
+    <Content Include="Resources\Buscar_p.png" />
+    <Content Include="Resources\caja_b.png" />
+    <Content Include="Resources\caja_m.png" />
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\categoria.png" />
+    <Content Include="Resources\cliente_m.png" />
+    <Content Include="Resources\cog.png" />
+    <Content Include="Resources\cog1.png" />
+    <Content Include="Resources\coins_add.png" />
+    <Content Include="Resources\comprasdetalladas.png" />
+    <Content Include="Resources\comprasrealizadas.png" />
+    <Content Include="Resources\compra_b.png" />
+    <Content Include="Resources\compra_b1.png" />
+    <Content Include="Resources\compra_m.png" />
+    <Content Include="Resources\Database.png" />
+    <Content Include="Resources\disco.png" />
+    <Content Include="Resources\documento.png" />
+    <Content Include="Resources\door_in.png" />
+    <Content Include="Resources\door_in1.png" />
+    <Content Include="Resources\eliminar.png" />
+    <Content Include="Resources\empleados_b.png" />
+    <Content Include="Resources\error2.png" />
+    <Content Include="Resources\file.png" />
+    <Content Include="Resources\file_add.png" />
+    <Content Include="Resources\file_delete.png" />
+    <Content Include="Resources\folder.png" />
+    <Content Include="Resources\folder1.png" />
+    <Content Include="Resources\graduation-hat.png" />
+    <Content Include="Resources\imprimir.png" />
+    <Content Include="Resources\leather-bag.png" />
+    <Content Include="Resources\modificar.png" />
+    <Content Include="Resources\My Icons.png" />
+    <Content Include="Resources\nuevo.png" />
+    <Content Include="Resources\onebit_20.png" />
+    <Content Include="Resources\pencil-scale.png" />
+    <Content Include="Resources\productos_m.png" />
+    <Content Include="Resources\productos_m1.png" />
+    <Content Include="Resources\proveedores_m.png" />
+    <Content Include="Resources\Remove.png" />
+    <Content Include="Resources\Remove1.png" />
+    <Content Include="Resources\report.png" />
+    <Content Include="Resources\restaurar.png" />
+    <Content Include="Resources\Tag.png" />
+    <Content Include="Resources\testtube.png" />
+    <Content Include="Resources\Users 2.png" />
+    <Content Include="Resources\ventas2.png" />
+    <Content Include="Resources\ventasrealizadas.png" />
+    <Content Include="Resources\ventasrealizadas1.png" />
+    <Content Include="Resources\ventas_m.png" />
+    <Content Include="Resources\Ver_recibo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
