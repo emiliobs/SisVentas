@@ -15,7 +15,7 @@ namespace CapaPresentacion
     public partial class frmVenta : Form
     {
         private bool IsNuevo = false;
-        private int IdTrabajador;
+        public int IdTrabajador;
         private DataTable dtDetalleVentas;
 
         private decimal totalPagado = 0;
@@ -45,7 +45,7 @@ namespace CapaPresentacion
                                 DateTime fechaVencimiento
                                 )
            {
-            this.txtIdArticulo.Text = iddetalleIngreso;
+            this.txtIdArticulo.Text = iddetalleIngreso.ToString();
             this.txtArticulo.Text = nombre;
             this.txtPrecio_Compra.Text = precioCompra.ToString();
             this.txtPrecio_Venta.Text = precioVenta.ToString();
@@ -77,6 +77,25 @@ namespace CapaPresentacion
         private void frmVenta_FormClosing(object sender, FormClosingEventArgs e)
         {
             Instancia = null;
+        }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            frmVistaClienteVenta frmVista = new frmVistaClienteVenta();
+            frmVista.ShowDialog();
+            
+        }
+
+        private void btnBuscarArticulo_Click(object sender, EventArgs e)
+        {
+            frmVistaArticuloVenta frmVista = new frmVistaArticuloVenta();
+
+            frmVista.ShowDialog();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -51,10 +51,12 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dataListadoDetalle = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtStockActual = new System.Windows.Forms.TextBox();
             this.btnQuitar = new System.Windows.Forms.Button();
+            this.txtIdArticulo = new System.Windows.Forms.TextBox();
             this.btnBuscarArticulo = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
@@ -67,7 +69,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtArticulo = new System.Windows.Forms.TextBox();
             this.txtIgv = new System.Windows.Forms.TextBox();
-            this.txtIdArticulo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCorrelativo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -88,7 +89,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -249,6 +249,7 @@
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 
@@ -366,6 +367,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(203, 80);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(90, 17);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "Stock Actual:";
+            // 
             // txtDescuento
             // 
             this.txtDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -402,6 +412,15 @@
             this.btnQuitar.TabIndex = 41;
             this.btnQuitar.UseVisualStyleBackColor = true;
             // 
+            // txtIdArticulo
+            // 
+            this.txtIdArticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtIdArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdArticulo.Location = new System.Drawing.Point(98, 13);
+            this.txtIdArticulo.Name = "txtIdArticulo";
+            this.txtIdArticulo.Size = new System.Drawing.Size(55, 22);
+            this.txtIdArticulo.TabIndex = 31;
+            // 
             // btnBuscarArticulo
             // 
             this.btnBuscarArticulo.Image = global::CapaPresentacion.Properties.Resources.Buscar;
@@ -410,6 +429,7 @@
             this.btnBuscarArticulo.Size = new System.Drawing.Size(67, 55);
             this.btnBuscarArticulo.TabIndex = 32;
             this.btnBuscarArticulo.UseVisualStyleBackColor = true;
+            this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
             // 
             // btnAgregar
             // 
@@ -509,15 +529,6 @@
             this.txtIgv.Size = new System.Drawing.Size(108, 22);
             this.txtIgv.TabIndex = 27;
             // 
-            // txtIdArticulo
-            // 
-            this.txtIdArticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtIdArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdArticulo.Location = new System.Drawing.Point(98, 13);
-            this.txtIdArticulo.Name = "txtIdArticulo";
-            this.txtIdArticulo.Size = new System.Drawing.Size(55, 22);
-            this.txtIdArticulo.TabIndex = 31;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -575,6 +586,7 @@
             this.btnBuscarCliente.Size = new System.Drawing.Size(67, 54);
             this.btnBuscarCliente.TabIndex = 18;
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // txtIdCliente
             // 
@@ -710,15 +722,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(953, 546);
             this.tabControl1.TabIndex = 16;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(203, 80);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(90, 17);
-            this.label17.TabIndex = 45;
-            this.label17.Text = "Stock Actual:";
             // 
             // frmVenta
             // 

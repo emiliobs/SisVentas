@@ -177,11 +177,17 @@
     <EmbeddedResource Include="frmVenta.resx">
       <DependentUpon>frmVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaArticuloVenta.resx">
+      <DependentUpon>frmVistaArticuloVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVistaArticulo_Ingreso.resx">
       <DependentUpon>FrmVistaArticulo_Ingreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVistaCategoriaArticulo.resx">
       <DependentUpon>frmVistaCategoriaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaClienteVenta.resx">
+      <DependentUpon>frmVistaClienteVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVistaProveedor_Ingreso.resx">
       <DependentUpon>FrmVistaProveedor_Ingreso.cs</DependentUpon>
