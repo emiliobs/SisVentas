@@ -228,11 +228,11 @@ namespace CapaPresentacion
 
         private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVenta frm = frmVenta.GetInstancia();
+            FrmVenta frm = FrmVenta.GetInstancia();
             frm.MdiParent = this;
             frm.Show();
 
-            frm.IdTrabajador = Convert.ToInt32(this.IdTrabajador); 
+            frm.Idtrabajador = Convert.ToInt32(this.IdTrabajador);
         }
     }                                            
 }

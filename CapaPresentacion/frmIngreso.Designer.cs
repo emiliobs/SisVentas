@@ -117,6 +117,7 @@
             // 
             // btnQuitar
             // 
+            this.btnQuitar.Image = global::CapaPresentacion.Properties.Resources.Remove1;
             this.btnQuitar.Location = new System.Drawing.Point(792, 54);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(57, 33);
@@ -126,6 +127,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Image = global::CapaPresentacion.Properties.Resources.agregar_p;
             this.btnAgregar.Location = new System.Drawing.Point(792, 16);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(57, 33);
@@ -245,6 +247,7 @@
             // 
             // btnBuscarProveedor
             // 
+            this.btnBuscarProveedor.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
             this.btnBuscarProveedor.Location = new System.Drawing.Point(488, 34);
             this.btnBuscarProveedor.Name = "btnBuscarProveedor";
             this.btnBuscarProveedor.Size = new System.Drawing.Size(43, 31);
@@ -412,7 +415,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(945, 430);
+            this.tabPage1.Size = new System.Drawing.Size(945, 457);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -649,6 +652,7 @@
             // 
             // btnBuscarArticulo
             // 
+            this.btnBuscarArticulo.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
             this.btnBuscarArticulo.Location = new System.Drawing.Point(229, 12);
             this.btnBuscarArticulo.Name = "btnBuscarArticulo";
             this.btnBuscarArticulo.Size = new System.Drawing.Size(43, 31);

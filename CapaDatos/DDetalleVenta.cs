@@ -3,120 +3,79 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//
-using System.Data.SqlClient;
+
 using System.Data;
+using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    //Constructores:
-    public class DDetalleVenta
+    public class DDetalle_Venta
     {
-        private int idDetalleVenta;
-        private int idVenta;
-        private  int idDetalleIngreso;
-        private int cantidad;
-        private decimal precioVenta;
-        private decimal descuento;
-
-        public DDetalleVenta(int idDetalleVenta, int idVenta, int idDetalleIngreso, int cantidad, decimal precioVenta, decimal descuento)
+        private int _Iddetalle_venta;
+        private int _Idventa;
+        private int _Iddetalle_ingreso;
+        private int _Cantidad;
+        private decimal _Precio_Venta;
+        private decimal _Descuento;
+        //Propiedades
+        public int Iddetalle_venta
         {
-            this.IdDetalleVenta = idDetalleVenta;
-            this.IdVenta = idVenta;
-            this.IdDetalleIngreso = idDetalleIngreso;
-            this.Cantidad = cantidad;
-            this.PrecioVenta = precioVenta;
-            this.Descuento = descuento;
+            get { return _Iddetalle_venta; }
+            set { _Iddetalle_venta = value; }
         }
 
 
-        //Propiedades:
-        public
-        DDetalleVenta()
+        public int Idventa
         {
-
+            get { return _Idventa; }
+            set { _Idventa = value; }
         }
 
-        public int IdDetalleVenta
+        public int Iddetalle_ingreso
         {
-            get
-            {
-                return idDetalleVenta;
-            }
-
-            set
-            {
-                idDetalleVenta = value;
-            }
+            get { return _Iddetalle_ingreso; }
+            set { _Iddetalle_ingreso = value; }
         }
 
-        public int IdVenta
-        {
-            get
-            {
-                return idVenta;
-            }
-
-            set
-            {
-                idVenta = value;
-            }
-        }
-
-        public int IdDetalleIngreso
-        {
-            get
-            {
-                return idDetalleIngreso;
-            }
-
-            set
-            {
-                idDetalleIngreso = value;
-            }
-        }
 
         public int Cantidad
         {
-            get
-            {
-                return cantidad;
-            }
-
-            set
-            {
-                cantidad = value;
-            }
+            get { return _Cantidad; }
+            set { _Cantidad = value; }
         }
 
-        public decimal PrecioVenta
+        public decimal Precio_Venta
         {
-            get
-            {
-                return precioVenta;
-            }
-
-            set
-            {
-                precioVenta = value;
-            }
+            get { return _Precio_Venta; }
+            set { _Precio_Venta = value; }
         }
+
 
         public decimal Descuento
         {
-            get
-            {
-                return descuento;
-            }
-
-            set
-            {
-                descuento = value;
-            }
+            get { return _Descuento; }
+            set { _Descuento = value; }
         }
 
-        //Método Insertar:
-        public string Insertar(DDetalleVenta DetalleVenta,
+        //Constructores
+        public DDetalle_Venta()
+        {
+
+        }
+
+        public DDetalle_Venta(int iddetalle_venta, int idventa, int iddetalle_ingreso,
+            int cantidad, decimal precio_venta, decimal descuento)
+        {
+            this.Iddetalle_venta = iddetalle_venta;
+            this.Idventa = idventa;
+            this.Iddetalle_ingreso = iddetalle_ingreso;
+            this.Cantidad = cantidad;
+            this.Precio_Venta = precio_venta;
+            this.Descuento = descuento;
+        }
+
+        //Método Insertar
+        public string Insertar(DDetalle_Venta Detalle_Venta,
             ref SqlConnection SqlCon, ref SqlTransaction SqlTra)
         {
             string rpta = "";
@@ -130,25 +89,41 @@ namespace CapaDatos
                 SqlCmd.CommandText = "spInsertarDetalleVenta";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter Pariddetalle_venta = new SqlParameter("@iddetalle_venta", DetalleVenta.IdDetalleVenta);
-                SqlCmd.Parameters.Add(Pariddetalle_venta);
+                SqlParameter ParIddetalle_Venta = new SqlParameter();
+                ParIddetalle_Venta.ParameterName = "@iddetalle_venta";
+                ParIddetalle_Venta.SqlDbType = SqlDbType.Int;
+                ParIddetalle_Venta.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIddetalle_Venta);
 
-                SqlParameter Paridventa = new SqlParameter("@idventa", DetalleVenta.IdDetalleVenta);
-                SqlCmd.Parameters.Add(Paridventa);
+                SqlParameter ParIdventa = new SqlParameter();
+                ParIdventa.ParameterName = "@idventa";
+                ParIdventa.SqlDbType = SqlDbType.Int;
+                ParIdventa.Value = Detalle_Venta.Idventa;
+                SqlCmd.Parameters.Add(ParIdventa);
 
-                SqlParameter Pariddetalle_ingreso = new SqlParameter("@iddetalle_ingreso", DetalleVenta.IdDetalleIngreso);
-                SqlCmd.Parameters.Add(Pariddetalle_ingreso);
+                SqlParameter ParIddetalle_ingreso = new SqlParameter();
+                ParIddetalle_ingreso.ParameterName = "@iddetalle_ingreso";
+                ParIddetalle_ingreso.SqlDbType = SqlDbType.Int;
+                ParIddetalle_ingreso.Value = Detalle_Venta.Iddetalle_ingreso;
+                SqlCmd.Parameters.Add(ParIddetalle_ingreso);
 
+                SqlParameter ParCantidad = new SqlParameter();
+                ParCantidad.ParameterName = "@cantidad";
+                ParCantidad.SqlDbType = SqlDbType.Int;
+                ParCantidad.Value = Detalle_Venta.Cantidad;
+                SqlCmd.Parameters.Add(ParCantidad);
 
-                SqlParameter Parcantidad = new SqlParameter("@cantidad", DetalleVenta.Cantidad);
-                SqlCmd.Parameters.Add(Parcantidad);
+                SqlParameter ParPrecioVenta = new SqlParameter();
+                ParPrecioVenta.ParameterName = "@precio_venta";
+                ParPrecioVenta.SqlDbType = SqlDbType.Money;
+                ParPrecioVenta.Value = Detalle_Venta.Precio_Venta;
+                SqlCmd.Parameters.Add(ParPrecioVenta);
 
-                SqlParameter Parprecio_venta = new SqlParameter("@precio_venta", DetalleVenta.PrecioVenta);
-                SqlCmd.Parameters.Add(Parprecio_venta);
-
-
-                SqlParameter Pardescuento = new SqlParameter("@descuento", DetalleVenta.Descuento);
-                SqlCmd.Parameters.Add(Pardescuento);                
+                SqlParameter ParDescuento = new SqlParameter();
+                ParDescuento.ParameterName = "@descuento";
+                ParDescuento.SqlDbType = SqlDbType.Money;
+                ParDescuento.Value = Detalle_Venta.Descuento;
+                SqlCmd.Parameters.Add(ParDescuento);
 
                 //Ejecutamos nuestro comando
 
@@ -164,5 +139,6 @@ namespace CapaDatos
             return rpta;
 
         }
+
     }
 }
