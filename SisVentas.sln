@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{3041819D-1F83-4652-A3E3-F3E2308AA391}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\DBScript.sql = ..\..\..\DBScript.sql
+		..\..\..\..\Desktop\DBVentasCopia.bak = ..\..\..\..\Desktop\DBVentasCopia.bak
 	EndProjectSection
 EndProject
 Global
