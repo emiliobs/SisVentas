@@ -472,7 +472,7 @@
         <Top>2.36489in</Top>
         <Left>0.205in</Left>
         <Height>0.5in</Height>
-        <Width>8.45in</Width>
+        <Width>8.44998in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -887,7 +887,7 @@
         <Source>Embedded</Source>
         <Value>images</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>0.21667in</Top>
+        <Top>0.25in</Top>
         <Left>0.28833in</Left>
         <Height>1.01333in</Height>
         <Width>2.35in</Width>
@@ -956,7 +956,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>0.31611in</Top>
+        <Top>0.34944in</Top>
         <Left>2.80886in</Left>
         <Height>0.68611in</Height>
         <Width>1.46667in</Width>

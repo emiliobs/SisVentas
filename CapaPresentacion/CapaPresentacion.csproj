@@ -158,6 +158,12 @@
     <Compile Include="Reportes\FrmReporteFactura.Designer.cs">
       <DependentUpon>FrmReporteFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FrmReportesArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReportesArticulos.Designer.cs">
+      <DependentUpon>FrmReportesArticulos.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
@@ -219,6 +225,10 @@
     <EmbeddedResource Include="Reportes\FrmReporteFactura.resx">
       <DependentUpon>FrmReporteFactura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReportesArticulos.resx">
+      <DependentUpon>FrmReportesArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptArticulos.rdlc" />
     <EmbeddedResource Include="Reportes\rptComprobanteFactura.rdlc" />
   </ItemGroup>
   <ItemGroup>

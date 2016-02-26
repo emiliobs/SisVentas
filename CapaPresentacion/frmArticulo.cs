@@ -393,5 +393,12 @@ namespace CapaPresentacion
             frmVistaCategoriaArticulo form = new frmVistaCategoriaArticulo();
             form.ShowDialog();
         }
+
+        private void imprimirBoton_Click(object sender, EventArgs e)
+        {
+            FrmReportesArticulos frm = new FrmReportesArticulos();
+
+            frm.ShowDialog();
+        }
     }
 }
