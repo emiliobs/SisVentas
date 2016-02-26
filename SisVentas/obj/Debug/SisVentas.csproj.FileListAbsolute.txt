@@ -12,3 +12,15 @@ C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\obj\De
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\obj\Debug\SisVentas.csproj.GenerateResource.Cache
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\obj\Debug\SisVentas.exe
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\obj\Debug\SisVentas.pdb
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll

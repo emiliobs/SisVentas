@@ -488,5 +488,13 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnComprobante_Click_1(object sender, EventArgs e)
+        {
+            FrmReporteFactura frm = new FrmReporteFactura();
+
+            frm.IdVenta = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idventa"].Value);
+            frm.ShowDialog();
+        }
     }
 }
