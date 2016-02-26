@@ -60,5 +60,10 @@ namespace CapaNegocio
             articulo.TxtBuscar = txtBuscarNombre;
             return articulo.BuscarNombre(articulo);
         }
+
+        public static DataTable StockArticulos()
+        {
+            return new DArticulo().StockArticulos();
+        }
     }
 }

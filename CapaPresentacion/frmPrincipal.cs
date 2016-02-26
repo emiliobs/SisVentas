@@ -234,5 +234,14 @@ namespace CapaPresentacion
 
             frm.Idtrabajador = Convert.ToInt32(this.IdTrabajador);
         }
+
+        private void stockDeArtículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.frmConsultaStockArticulos frm = new Consultas.frmConsultaStockArticulos();
+
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
     }                                            
 }
