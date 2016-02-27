@@ -8,6 +8,6 @@ namespace CapaDatos
 {
     public class Conexion
     {
-        public static string Cn = @"Data Source=EMI\EMILIO;Initial Catalog=dbventas;Integrated Security=True";
+        public static string Cn = Properties.Settings.Default.cn;
     }
 }

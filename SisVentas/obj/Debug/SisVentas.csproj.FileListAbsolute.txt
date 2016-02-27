@@ -24,3 +24,7 @@ C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\De
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\SisVentas.exe.manifest
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\bin\Debug\SisVentas.application
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\obj\Debug\SisVentas.exe.manifest
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\SisVentas\obj\Debug\SisVentas.application

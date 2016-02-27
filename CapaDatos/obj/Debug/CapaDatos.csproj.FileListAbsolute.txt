@@ -3,3 +3,4 @@ C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaDatos\bin\De
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Emilio\Documents\Visual Studio 2015\Projects\SisVentas\CapaDatos\bin\Debug\CapaDatos.dll.config
